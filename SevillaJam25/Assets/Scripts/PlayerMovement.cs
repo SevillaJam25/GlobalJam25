@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed_ = 2.0f;
     [SerializeField] private float jumpHeight_ = 1.0f;
     [SerializeField] private float gravity_ = -9.81f; 
-    //[SerializeField] private Camera camera_;
+    [SerializeField] private Camera camera_;
 
 
     void Start()
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         float yMov = Input.GetAxis("Vertical");
         Vector3 move = new Vector3(xMov, 0, yMov);
         //Quaternion camRot = Quaternion.Euler(0, camera_.transform.eulerAngles.y, 0);
-        controller_.Move(/*camRot **/ move * Time.deltaTime * speed_);
+        controller_.Move(/*camRot * */move * Time.deltaTime * speed_);
         //if (move != Vector3.zero)
         //{
         //    gameObject.transform.forward = move; //Probably will change this for backwards movement
