@@ -8,20 +8,20 @@ public class PlayerMovement : MonoBehaviour
     public Transform boatSpot;
     [SerializeField] private float speed_ = 2.0f;
     [SerializeField] private float jumpHeight_ = 1.0f;
-    [SerializeField] private float gravity_ = -9.81f; 
+    [SerializeField] private float gravity_ = -9.81f;
     //[SerializeField] private Camera camera_;
-
+    bool isOnBoat;
 
     void Start()
     {//Init char controller
         controller_ = gameObject.AddComponent<CharacterController>();
+        isOnBoat = true;
         //camera_ = gameObject.GetComponentInChildren<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        DetectKeys();
         isGrounded_ = controller_.isGrounded;
         if (isGrounded_ && playerVelocity_.y < 0) playerVelocity_.y = 0;
 
@@ -41,16 +41,14 @@ public class PlayerMovement : MonoBehaviour
         }
         playerVelocity_.y += gravity_ * Time.deltaTime;
         controller_.Move(playerVelocity_ * Time.deltaTime);
+        HandleInput(); 
     }
 
-    private void DetectKeys() {
-        if(Input.GetKeyDown(KeyCode.E)) {
-            Debug.Log("HEY: "+ boatSpot.position);
-            Debug.Log("Posicion pj: " + transform.position);
-            transform.position = boatSpot.position;
-            Debug.Log("Posicion pj: " + transform.position);
-        }
+    private void HandleInput()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+            transform.SetPositionAndRotation(boatSpot.position, transform.rotation);
+
     }
 
-    
 }
