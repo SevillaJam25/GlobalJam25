@@ -28,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 right = Camera.main.transform.right;
 
         // Asegurarse de que el movimiento sea horizontal y no afecte al eje Y
-        forward.y = 0f;
-        right.y = 0f;
+        //forward.y = 0f;
+        //right.y = 0f;
 
         // Normalizar las direcciones para evitar movimientos más rápidos en diagonales
         forward.Normalize();
