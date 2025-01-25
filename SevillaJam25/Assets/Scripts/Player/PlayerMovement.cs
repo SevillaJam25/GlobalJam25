@@ -10,12 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpHeight_ = 1.0f;
     [SerializeField] private float gravity_ = -9.81f;
     //[SerializeField] private Camera camera_;
-    bool isOnBoat;
+    private Inventory inventory;
 
     void Start()
     {//Init char controller
         controller_ = gameObject.AddComponent<CharacterController>();
-        isOnBoat = true;
+        inventory = GetComponent<Inventory>();
         //camera_ = gameObject.GetComponentInChildren<Camera>();
     }
 
@@ -52,10 +52,27 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.SetPositionAndRotation(boatSpot.position, transform.rotation);
             }
-            if(PlayerTrigger.objectTriggered) {
-                
+
+            if (PlayerTrigger.objectTriggered)
+            {
+                this.inventory.selectObject(PlayerTrigger.objectTriggered);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            this.inventory.dropItem();
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        {
+            this.inventory.changeInventoryIndex(true);
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        {
+            this.inventory.changeInventoryIndex(false);
+        }
+
     }
 
 }
