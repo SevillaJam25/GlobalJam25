@@ -56,7 +56,10 @@ public class PlayerMovement : MonoBehaviour
 
             if (PlayerTrigger.objectTriggered)
             {
-                this.inventory.selectObject(PlayerTrigger.objectTriggered);
+                if (this.inventory.selectObject(PlayerTrigger.objectTriggered))
+                {
+                    PlayerTrigger.objectTriggered = null;
+                }
             }
         }
 
@@ -73,6 +76,24 @@ public class PlayerMovement : MonoBehaviour
         {
             this.inventory.changeInventoryIndex(false);
         }
+
+
+        if (Input.GetMouseButtonDown(0)) // 0 es el botón izquierdo
+        {
+            // Debug.Log("Clic izquierdo presionado");
+            this.inventory.useObject();
+        }
+
+        if (Input.GetMouseButton(0)) // Manteniendo presionado
+        {
+            // Debug.Log("Clic izquierdo mantenido");
+        }
+
+        if (Input.GetMouseButtonUp(0)) // Cuando se suelta
+        {
+            // Debug.Log("Clic izquierdo soltado");
+        }
+
 
     }
 
