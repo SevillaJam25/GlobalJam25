@@ -10,7 +10,7 @@
 /SevillaJam25/[Bb]uilds/
 /SevillaJam25/[Ll]ogs/
 /SevillaJam25/[Uu]ser[Ss]ettings/
-
+*.meta
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /SevillaJam25/[Mm]emoryCaptures/
