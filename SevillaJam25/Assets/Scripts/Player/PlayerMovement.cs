@@ -11,8 +11,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float gravity_ = -9.81f;
     private Inventory inventory;
 
+    Rigidbody rb;
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         cameraController = GetComponent<CameraController>();
         inventory = GetComponent<Inventory>();
         controller_ = gameObject.AddComponent<CharacterController>();
@@ -28,8 +30,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 right = Camera.main.transform.right;
 
         // Asegurarse de que el movimiento sea horizontal y no afecte al eje Y
-        //forward.y = 0f;
-        //right.y = 0f;
+        forward.y = 0;
+        right.y = 0f;
 
         // Normalizar las direcciones para evitar movimientos más rápidos en diagonales
         forward.Normalize();
@@ -39,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = (right * xMov + forward * yMov).normalized;
 
         // Mover al personaje
-        controller_.Move(move * Time.deltaTime * speed_);
+        controller_.SimpleMove(move * Time.deltaTime * speed_);
         HandleInput();
     }
 

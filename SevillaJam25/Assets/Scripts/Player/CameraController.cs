@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
         get { return sensitivity; }
         set { sensitivity = value; }
     }
-    [Range(500f, 2500f)][SerializeField] float sensitivity = 2f;
+    [Range(50f, 500f)][SerializeField] float sensitivity = 2f;
     [Tooltip("Limits vertical camera rotation. Prevents the flipping that happens when rotation goes above 90.")]
     public Transform playerBody;    
     private float xRotation = 0f;
@@ -31,6 +31,7 @@ public class CameraController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); // Rotación de la cámara
         playerBody.Rotate(Vector3.up * mouseX); // Rotación del personaje
 
+       
 
         // UI OPENED
         if (Input.GetKeyDown(KeyCode.Escape))
