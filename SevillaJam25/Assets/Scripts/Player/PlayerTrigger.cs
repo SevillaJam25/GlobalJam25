@@ -15,6 +15,9 @@ public class PlayerTrigger : MonoBehaviour
     public static event OnTriggerEnterWithElement onTriggerEnterWithElement;
     public delegate void OnTriggerExitWithElement();
     public static event OnTriggerExitWithElement onTriggerExitWithElement;
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
     public static Object objectTriggered;
     public static bool ladderTriggered;
     void OnTriggerEnter(Collider other)
