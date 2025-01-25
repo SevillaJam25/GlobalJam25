@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
+using System.Globalization;
 
 
 public class PlayerTrigger : MonoBehaviour
@@ -14,6 +15,10 @@ public class PlayerTrigger : MonoBehaviour
     public delegate void OnTriggerExitWithElement();
     public static event OnTriggerExitWithElement onTriggerExitWithElement;
     public static PlayerPosition playerPosition = PlayerPosition.BOAT;
+
+    public delegate void OnEnterEMFArea(int area);
+    public static event OnEnterEMFArea onEnterEMFArea;
+
 
     public static Object objectTriggered;
     public static bool ladderTriggered;
@@ -40,6 +45,11 @@ public class PlayerTrigger : MonoBehaviour
         if (other.tag == "Selected")
         {
             onTriggerExitWithElement.Invoke();
+        }
+
+        if (other.tag == "EMF")
+        {
+            onEnterEMFArea.Invoke(int.Parse(other.name));
         }
     }
 
