@@ -41,14 +41,21 @@ public class PlayerMovement : MonoBehaviour
         }
         playerVelocity_.y += gravity_ * Time.deltaTime;
         controller_.Move(playerVelocity_ * Time.deltaTime);
-        HandleInput(); 
+        HandleInput();
     }
 
     private void HandleInput()
     {
         if (Input.GetKeyDown(KeyCode.E))
-            transform.SetPositionAndRotation(boatSpot.position, transform.rotation);
-
+        {
+            if (PlayerTrigger.ladderTriggered)
+            {
+                transform.SetPositionAndRotation(boatSpot.position, transform.rotation);
+            }
+            if(PlayerTrigger.objectTriggered) {
+                
+            }
+        }
     }
 
 }
