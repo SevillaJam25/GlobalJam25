@@ -51,6 +51,7 @@ public class OxygenSystem : MonoBehaviour
     private void StopSubmersion()
     {
         updateOxygen(100f);
+        changeState(BreahStates.SURFACE);
         isBreating = false;
         StopCoroutine("Breath");
     }
