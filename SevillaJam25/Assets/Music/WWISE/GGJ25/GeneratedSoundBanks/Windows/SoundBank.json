@@ -1,0 +1,1131 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1661994096",
+    "Type": "User",
+    "GUID": "{161E087F-A704-47F8-9049-C9C51E523A0D}",
+    "Language": "SFX",
+    "Hash": "{18939DC0-82D7-8920-F3C4-9B74D06703D2}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBank",
+    "ShortName": "SoundBank",
+    "Path": "SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "2994963",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_out_medium-03.wav",
+      "CachePath": "7A/{7AE469A7-004A-DB12-0AEE-0583824C9D07}.wem"
+     },
+     {
+      "Id": "64875434",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_in_medium-03.wav",
+      "CachePath": "7E/{7E388252-3110-157F-C45C-F81BF17AB67A}.wem"
+     },
+     {
+      "Id": "100545280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "detector-02.wav",
+      "CachePath": "78/{782B379F-3255-02DF-306F-DA9023D91ED8}.wem"
+     },
+     {
+      "Id": "144046571",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_in_medium-01.wav",
+      "CachePath": "87/{8738AC16-4CDC-AD17-F90F-A6A7F4E45AFD}.wem"
+     },
+     {
+      "Id": "294370108",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_out_slow-01.wav",
+      "CachePath": "22/{22D230BB-1AF8-9B8A-BDEB-E0AEE5FB7843}.wem"
+     },
+     {
+      "Id": "318183822",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "crucifix.wav",
+      "CachePath": "80/{8066F156-4675-CC54-2CF5-CB2A5DEEE7A2}.wem"
+     },
+     {
+      "Id": "360162971",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_in_medium-02.wav",
+      "CachePath": "54/{549B1571-0D1D-704B-9010-5E9906579B10}.wem"
+     },
+     {
+      "Id": "378180856",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "detector-05.wav",
+      "CachePath": "1C/{1CF17FA4-915C-539D-2C32-B7945836B5D4}.wem"
+     },
+     {
+      "Id": "417202405",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_out_fast-03.wav",
+      "CachePath": "5F/{5FDF84C0-19C0-E52B-239E-BBD8802900EE}.wem"
+     },
+     {
+      "Id": "446193543",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_out_medium-02.wav",
+      "CachePath": "EC/{EC509AA8-8ABA-8634-D5A2-E38336250CB3}.wem"
+     },
+     {
+      "Id": "458502676",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "detector-04.wav",
+      "CachePath": "19/{1994FB4F-447C-BAB4-8D30-ED892320A093}.wem"
+     },
+     {
+      "Id": "478445209",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_out_slow-02.wav",
+      "CachePath": "74/{746B63BF-8CEE-C2C6-5B48-B001F9AF1DDB}.wem"
+     },
+     {
+      "Id": "492330208",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_in_slow-01.wav",
+      "CachePath": "93/{93878335-A4EC-D99D-AF6B-6BC9AA314FCF}.wem"
+     },
+     {
+      "Id": "493866566",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_out_fast-02.wav",
+      "CachePath": "1F/{1F659DB1-A724-2B57-17D1-E82D6A9D5B45}.wem"
+     },
+     {
+      "Id": "520691493",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "tema organo.wav",
+      "CachePath": "B8/{B868414C-7919-8C41-A6C6-EE940908362B}.wem"
+     },
+     {
+      "Id": "530085473",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_in_fast-01.wav",
+      "CachePath": "3D/{3D3F3835-E117-AF9B-BD24-D84A9F2C5065}.wem"
+     },
+     {
+      "Id": "533129816",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "detector-01.wav",
+      "CachePath": "A7/{A7967AA6-841C-8351-38AA-D9C267EB5035}.wem"
+     },
+     {
+      "Id": "554560691",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "surface-01.wav",
+      "CachePath": "3F/{3F5C646D-C800-DCB6-6508-4948803624EB}.wem"
+     },
+     {
+      "Id": "560590981",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "calyx.wav",
+      "CachePath": "23/{23244EA6-808C-BE3E-5ECC-6F3003E2A749}.wem"
+     },
+     {
+      "Id": "591024859",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_out_medium-01.wav",
+      "CachePath": "88/{88EAED35-A2AF-B5C8-8C32-D0234862FD87}.wem"
+     },
+     {
+      "Id": "607429272",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_in_fast-03.wav",
+      "CachePath": "A0/{A02C3C94-EB26-748A-3776-B378706758CF}.wem"
+     },
+     {
+      "Id": "704286143",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "detector-03.wav",
+      "CachePath": "56/{56900596-4FA5-5905-558E-CED2DE366B47}.wem"
+     },
+     {
+      "Id": "724879013",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_in_slow-03.wav",
+      "CachePath": "E4/{E4A248D9-7866-5FF9-70AA-5C71428E1C2D}.wem"
+     },
+     {
+      "Id": "779762849",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "surface-02.wav",
+      "CachePath": "F9/{F9575416-08C0-63E5-3021-28121EA482D6}.wem"
+     },
+     {
+      "Id": "836353531",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_in_slow-02.wav",
+      "CachePath": "A4/{A4F027A7-BED5-3025-650B-6D748D286767}.wem"
+     },
+     {
+      "Id": "857685262",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_out_slow-03.wav",
+      "CachePath": "CE/{CE19E5D8-F755-8E37-3890-98942F22D0D4}.wem"
+     },
+     {
+      "Id": "916282234",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "iron_hit.wav",
+      "CachePath": "1E/{1E97FD41-6C58-F998-BFD9-4AA52FE8B315}.wem"
+     },
+     {
+      "Id": "947097495",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_in_fast-02.wav",
+      "CachePath": "30/{30416987-BE8F-1D1C-7C8C-8BE38A01BF8E}.wem"
+     },
+     {
+      "Id": "982430676",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "breath_out_fast-01.wav",
+      "CachePath": "18/{18CA7E52-343D-BBBD-A2BB-CDA7C67BC578}.wem"
+     },
+     {
+      "Id": "1044924086",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "dynamo.wav",
+      "CachePath": "E2/{E20D21FE-2C2C-A45F-1C3D-982EE0A2E8E9}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3286790596",
+      "Name": "Breath_In_Fast",
+      "ObjectPath": "\\Events\\Default Work Unit\\BREATH\\Breath_In_Fast",
+      "GUID": "{40CCFE0B-32FD-48DE-95C7-CB96C71A86C5}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "3286790596",
+        "Name": "Breath_In_Fast",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_In_Fast",
+        "GUID": "{1DC16507-B7F3-4B9C-9306-235354AC319C}",
+        "Color": "24"
+       }
+      ]
+     },
+     {
+      "Id": "3768147567",
+      "Name": "Breath_In_Medium",
+      "ObjectPath": "\\Events\\Default Work Unit\\BREATH\\Breath_In_Medium",
+      "GUID": "{8F875BEC-EEA7-4EDC-804C-7F05FE619B81}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "3768147567",
+        "Name": "Breath_In_Medium",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_In_Medium",
+        "GUID": "{1DD9C3DD-1147-4D4E-BCC0-BF0B8BF5813C}",
+        "Color": "24"
+       }
+      ]
+     },
+     {
+      "Id": "289446981",
+      "Name": "Breath_In_Slow",
+      "ObjectPath": "\\Events\\Default Work Unit\\BREATH\\Breath_In_Slow",
+      "GUID": "{D0A1DD3E-2F19-4633-955F-57E8E3F22B0B}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "289446981",
+        "Name": "Breath_In_Slow",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_In_Slow",
+        "GUID": "{2EF48DA8-421D-4825-BD4F-7CBE90209F86}",
+        "Color": "24"
+       }
+      ]
+     },
+     {
+      "Id": "2318812695",
+      "Name": "Breath_Out_Fast",
+      "ObjectPath": "\\Events\\Default Work Unit\\BREATH\\Breath_Out_Fast",
+      "GUID": "{DA8CFD9A-0050-4CCE-9308-08F944DC098B}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "2318812695",
+        "Name": "Breath_Out_Fast",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_Out_Fast",
+        "GUID": "{D462C932-AD40-4352-BA91-A4F2C4467840}",
+        "Color": "24"
+       }
+      ]
+     },
+     {
+      "Id": "3926837372",
+      "Name": "Breath_Out_Medium",
+      "ObjectPath": "\\Events\\Default Work Unit\\BREATH\\Breath_Out_Medium",
+      "GUID": "{0DC8094E-DFA2-4000-8668-AD0B64A0D396}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "3926837372",
+        "Name": "Breath_Out_Medium",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_Out_Medium",
+        "GUID": "{28CD858C-2C48-4C05-97DA-8D6C5A12A4F2}",
+        "Color": "24"
+       }
+      ]
+     },
+     {
+      "Id": "884408238",
+      "Name": "Breath_Out_Slow",
+      "ObjectPath": "\\Events\\Default Work Unit\\BREATH\\Breath_Out_Slow",
+      "GUID": "{EA42DA93-3C88-45B0-BA04-D77316037E43}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "884408238",
+        "Name": "Breath_Out_Slow",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_Out_Slow",
+        "GUID": "{555BEE63-5068-4617-B1F0-EBAD17C41F4F}",
+        "Color": "24"
+       }
+      ]
+     },
+     {
+      "Id": "769541046",
+      "Name": "Bubbles",
+      "ObjectPath": "\\Events\\Default Work Unit\\STINGERS\\Bubbles",
+      "GUID": "{FD2A1260-104F-4430-916D-C657D2B4AA23}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "769541046",
+        "Name": "Bubbles",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Bubbles",
+        "GUID": "{35C37392-7DBC-4426-9BB7-231F0140A1C7}",
+        "Color": "26"
+       }
+      ]
+     },
+     {
+      "Id": "208944088",
+      "Name": "Calyx",
+      "ObjectPath": "\\Events\\Default Work Unit\\STINGERS\\Calyx",
+      "GUID": "{E62DF088-359F-4232-884C-C450EF3A9687}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "208944088",
+        "Name": "Calyx",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Calyx",
+        "GUID": "{C3AC5CE6-2E1F-4BAB-AA97-4DD3F7BE4896}",
+        "Color": "26"
+       }
+      ]
+     },
+     {
+      "Id": "3602146812",
+      "Name": "Crucifix",
+      "ObjectPath": "\\Events\\Default Work Unit\\STINGERS\\Crucifix",
+      "GUID": "{D7AFB3EF-0389-4DF5-A128-A49521B7E8BA}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "3602146812",
+        "Name": "Crucifix",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Crucifix",
+        "GUID": "{0F5FB86D-15C5-4087-B9FE-0012E7AE4AE0}",
+        "Color": "26"
+       }
+      ]
+     },
+     {
+      "Id": "1772053382",
+      "Name": "Depths_High",
+      "ObjectPath": "\\Events\\Default Work Unit\\STATES\\Depths_High",
+      "GUID": "{E767C246-9B91-4F72-AD79-58258846869D}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "2994963"
+       },
+       {
+        "Id": "64875434"
+       },
+       {
+        "Id": "144046571"
+       },
+       {
+        "Id": "294370108"
+       },
+       {
+        "Id": "318183822"
+       },
+       {
+        "Id": "360162971"
+       },
+       {
+        "Id": "417202405"
+       },
+       {
+        "Id": "446193543"
+       },
+       {
+        "Id": "478445209"
+       },
+       {
+        "Id": "492330208"
+       },
+       {
+        "Id": "493866566"
+       },
+       {
+        "Id": "530085473"
+       },
+       {
+        "Id": "560590981"
+       },
+       {
+        "Id": "591024859"
+       },
+       {
+        "Id": "607429272"
+       },
+       {
+        "Id": "724879013"
+       },
+       {
+        "Id": "836353531"
+       },
+       {
+        "Id": "857685262"
+       },
+       {
+        "Id": "947097495"
+       },
+       {
+        "Id": "982430676"
+       },
+       {
+        "Id": "1044924086"
+       }
+      ],
+      "ActionSetState": [
+       {
+        "GroupId": "1208172739",
+        "Id": "1772053382",
+        "Name": "Depths_High",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\Depths_High",
+        "GUID": "{C0971CFC-CAC8-450A-B3E6-58404BBDCD84}"
+       }
+      ]
+     },
+     {
+      "Id": "2401202096",
+      "Name": "Depths_Low",
+      "ObjectPath": "\\Events\\Default Work Unit\\STATES\\Depths_Low",
+      "GUID": "{AD7112CB-CAD0-4972-8074-6A685C6F2540}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "2994963"
+       },
+       {
+        "Id": "64875434"
+       },
+       {
+        "Id": "100545280"
+       },
+       {
+        "Id": "144046571"
+       },
+       {
+        "Id": "294370108"
+       },
+       {
+        "Id": "318183822"
+       },
+       {
+        "Id": "360162971"
+       },
+       {
+        "Id": "378180856"
+       },
+       {
+        "Id": "417202405"
+       },
+       {
+        "Id": "446193543"
+       },
+       {
+        "Id": "458502676"
+       },
+       {
+        "Id": "478445209"
+       },
+       {
+        "Id": "492330208"
+       },
+       {
+        "Id": "493866566"
+       },
+       {
+        "Id": "520691493"
+       },
+       {
+        "Id": "530085473"
+       },
+       {
+        "Id": "533129816"
+       },
+       {
+        "Id": "560590981"
+       },
+       {
+        "Id": "591024859"
+       },
+       {
+        "Id": "607429272"
+       },
+       {
+        "Id": "704286143"
+       },
+       {
+        "Id": "724879013"
+       },
+       {
+        "Id": "836353531"
+       },
+       {
+        "Id": "857685262"
+       },
+       {
+        "Id": "947097495"
+       },
+       {
+        "Id": "982430676"
+       },
+       {
+        "Id": "1044924086"
+       }
+      ],
+      "ActionSetState": [
+       {
+        "GroupId": "1208172739",
+        "Id": "2401202096",
+        "Name": "Depths_Low",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\Depths_Low",
+        "GUID": "{022E4662-8A22-4029-A752-B33C3589BE09}"
+       }
+      ]
+     },
+     {
+      "Id": "1898020672",
+      "Name": "Depths_Mid",
+      "ObjectPath": "\\Events\\Default Work Unit\\STATES\\Depths_Mid",
+      "GUID": "{4765D8DE-FBB2-46FA-BEB7-C0D5249FE92F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "2994963"
+       },
+       {
+        "Id": "64875434"
+       },
+       {
+        "Id": "144046571"
+       },
+       {
+        "Id": "294370108"
+       },
+       {
+        "Id": "318183822"
+       },
+       {
+        "Id": "360162971"
+       },
+       {
+        "Id": "417202405"
+       },
+       {
+        "Id": "446193543"
+       },
+       {
+        "Id": "478445209"
+       },
+       {
+        "Id": "492330208"
+       },
+       {
+        "Id": "493866566"
+       },
+       {
+        "Id": "530085473"
+       },
+       {
+        "Id": "560590981"
+       },
+       {
+        "Id": "591024859"
+       },
+       {
+        "Id": "607429272"
+       },
+       {
+        "Id": "724879013"
+       },
+       {
+        "Id": "836353531"
+       },
+       {
+        "Id": "857685262"
+       },
+       {
+        "Id": "947097495"
+       },
+       {
+        "Id": "982430676"
+       },
+       {
+        "Id": "1044924086"
+       }
+      ],
+      "ActionSetState": [
+       {
+        "GroupId": "1208172739",
+        "Id": "1898020672",
+        "Name": "Depths_Mid",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\Depths_Mid",
+        "GUID": "{F30C373D-7DF8-4BB9-A049-2DB2FF7C1D5B}"
+       }
+      ]
+     },
+     {
+      "Id": "746340238",
+      "Name": "Det_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\DETECTOR\\Det_01",
+      "GUID": "{86AFCCB4-120D-425F-B6B9-E1F20ED5D6B1}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "198272423",
+        "Id": "746340238",
+        "Name": "Det_01",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_01",
+        "GUID": "{C579A832-162A-4C5F-A77B-2E3F46C799FC}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "746340237",
+      "Name": "Det_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\DETECTOR\\Det_02",
+      "GUID": "{E82BA33A-2A0B-45D4-817E-A63A4D7A2AF4}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "198272423",
+        "Id": "746340237",
+        "Name": "Det_02",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_02",
+        "GUID": "{622BC5F3-19DE-4D4A-BE00-099E9CE612FD}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "746340236",
+      "Name": "Det_03",
+      "ObjectPath": "\\Events\\Default Work Unit\\DETECTOR\\Det_03",
+      "GUID": "{B5A165DA-C5FB-42DA-BFE6-2B192D10AD0A}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "198272423",
+        "Id": "746340236",
+        "Name": "Det_03",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_03",
+        "GUID": "{591ACE1C-D4DF-4B12-B3DA-CB6EA8671884}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "746340235",
+      "Name": "Det_04",
+      "ObjectPath": "\\Events\\Default Work Unit\\DETECTOR\\Det_04",
+      "GUID": "{0D62AE56-E09D-48B7-9191-FBB78E5DD6B8}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "198272423",
+        "Id": "746340235",
+        "Name": "Det_04",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_04",
+        "GUID": "{7F1530BC-5DBD-4EAE-88A7-F60FA6AEC9D0}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "746340234",
+      "Name": "Det_05",
+      "ObjectPath": "\\Events\\Default Work Unit\\DETECTOR\\Det_05",
+      "GUID": "{77C1CF2F-E001-4420-B848-1FCEBF163F39}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "198272423",
+        "Id": "746340234",
+        "Name": "Det_05",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_05",
+        "GUID": "{18469823-B3E8-405E-B82D-0AA52E5A7992}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "3211496542",
+      "Name": "Det_OFF",
+      "ObjectPath": "\\Events\\Default Work Unit\\DETECTOR\\Det_OFF",
+      "GUID": "{061342F8-F28F-4C09-AFD9-1785147923F4}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetSwitch": [
+       {
+        "GroupId": "198272423",
+        "Id": "3211496542",
+        "Name": "Det_OFF",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_OFF",
+        "GUID": "{E5FE0C27-1391-4188-918C-C4971EF51619}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "4156400771",
+      "Name": "Dynamo",
+      "ObjectPath": "\\Events\\Default Work Unit\\STINGERS\\Dynamo",
+      "GUID": "{723FA13A-1E74-465E-9F3E-0D92B24B038D}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "4156400771",
+        "Name": "Dynamo",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Dynamo",
+        "GUID": "{E951F759-877A-4705-A222-D68E33A974F0}",
+        "Color": "26"
+       }
+      ]
+     },
+     {
+      "Id": "1768652778",
+      "Name": "Emerge",
+      "ObjectPath": "\\Events\\Default Work Unit\\STINGERS\\Emerge",
+      "GUID": "{85590FB6-E5A3-4D4E-9588-63B26452BCB1}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "1768652778",
+        "Name": "Emerge",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Emerge",
+        "GUID": "{8F76FAFA-31DE-4C0A-9BEE-68825A77B8C2}",
+        "Color": "26"
+       }
+      ]
+     },
+     {
+      "Id": "4020135633",
+      "Name": "Iron_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\STINGERS\\Iron_Hit",
+      "GUID": "{6BE9F4F6-C4AE-49D3-B55F-461C5DA236A7}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "4020135633",
+        "Name": "Iron_Hit",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Iron_Hit",
+        "GUID": "{E011DB61-1C96-4720-8FD6-DE115798E5A1}",
+        "Color": "26"
+       }
+      ]
+     },
+     {
+      "Id": "2005704188",
+      "Name": "Main_Menu",
+      "ObjectPath": "\\Events\\Default Work Unit\\STATES\\Main_Menu",
+      "GUID": "{CD4946BC-3584-4878-A6CF-45AA481C3F0A}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "1208172739",
+        "Id": "2005704188",
+        "Name": "Main_Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\Main_Menu",
+        "GUID": "{F4FF80F7-33D3-4C9F-A2AC-C4446590ECDB}"
+       }
+      ]
+     },
+     {
+      "Id": "1740993339",
+      "Name": "Submerge",
+      "ObjectPath": "\\Events\\Default Work Unit\\STINGERS\\Submerge",
+      "GUID": "{5397BAB7-0F06-4CB1-84ED-4BEDCF1D1737}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionTrigger": [
+       {
+        "Id": "1740993339",
+        "Name": "Submerge",
+        "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Submerge",
+        "GUID": "{626D431D-FF8E-4A4D-9CDE-23BF2159366E}",
+        "Color": "26"
+       }
+      ]
+     },
+     {
+      "Id": "1834394558",
+      "Name": "Surface",
+      "ObjectPath": "\\Events\\Default Work Unit\\STATES\\Surface",
+      "GUID": "{CE22C8A4-18A9-482F-AAF5-872F85DD92D2}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "554560691"
+       },
+       {
+        "Id": "779762849"
+       }
+      ],
+      "ActionSetState": [
+       {
+        "GroupId": "1208172739",
+        "Id": "1834394558",
+        "Name": "Surface",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\Surface",
+        "GUID": "{042E865D-C32B-41D0-86CE-0BEB2DEB9551}"
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "1208172739",
+      "Name": "States",
+      "ObjectPath": "\\States\\Default Work Unit\\States",
+      "GUID": "{4EC0B4CB-FE63-4E24-8E80-DBF1FCBC21B4}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\None",
+        "GUID": "{A1988F57-6A79-413C-A671-354800E8E21C}"
+       },
+       {
+        "Id": "1772053382",
+        "Name": "Depths_High",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\Depths_High",
+        "GUID": "{C0971CFC-CAC8-450A-B3E6-58404BBDCD84}"
+       },
+       {
+        "Id": "1834394558",
+        "Name": "Surface",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\Surface",
+        "GUID": "{042E865D-C32B-41D0-86CE-0BEB2DEB9551}"
+       },
+       {
+        "Id": "1898020672",
+        "Name": "Depths_Mid",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\Depths_Mid",
+        "GUID": "{F30C373D-7DF8-4BB9-A049-2DB2FF7C1D5B}"
+       },
+       {
+        "Id": "2005704188",
+        "Name": "Main_Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\Main_Menu",
+        "GUID": "{F4FF80F7-33D3-4C9F-A2AC-C4446590ECDB}"
+       },
+       {
+        "Id": "2401202096",
+        "Name": "Depths_Low",
+        "ObjectPath": "\\States\\Default Work Unit\\States\\Depths_Low",
+        "GUID": "{022E4662-8A22-4029-A752-B33C3589BE09}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "198272423",
+      "Name": "Detector",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Detector",
+      "GUID": "{08E271DD-5BD8-4B32-913E-E5B61618B41F}",
+      "Color": "3",
+      "Switches": [
+       {
+        "Id": "746340234",
+        "Name": "Det_05",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_05",
+        "GUID": "{18469823-B3E8-405E-B82D-0AA52E5A7992}",
+        "Color": "3"
+       },
+       {
+        "Id": "746340235",
+        "Name": "Det_04",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_04",
+        "GUID": "{7F1530BC-5DBD-4EAE-88A7-F60FA6AEC9D0}",
+        "Color": "3"
+       },
+       {
+        "Id": "746340236",
+        "Name": "Det_03",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_03",
+        "GUID": "{591ACE1C-D4DF-4B12-B3DA-CB6EA8671884}",
+        "Color": "3"
+       },
+       {
+        "Id": "746340237",
+        "Name": "Det_02",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_02",
+        "GUID": "{622BC5F3-19DE-4D4A-BE00-099E9CE612FD}",
+        "Color": "3"
+       },
+       {
+        "Id": "746340238",
+        "Name": "Det_01",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_01",
+        "GUID": "{C579A832-162A-4C5F-A77B-2E3F46C799FC}",
+        "Color": "3"
+       },
+       {
+        "Id": "3211496542",
+        "Name": "Det_OFF",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Detector\\Det_OFF",
+        "GUID": "{E5FE0C27-1391-4188-918C-C4971EF51619}",
+        "Color": "3"
+       }
+      ]
+     }
+    ],
+    "Triggers": [
+     {
+      "Id": "208944088",
+      "Name": "Calyx",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Calyx",
+      "GUID": "{C3AC5CE6-2E1F-4BAB-AA97-4DD3F7BE4896}",
+      "Color": "26"
+     },
+     {
+      "Id": "289446981",
+      "Name": "Breath_In_Slow",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_In_Slow",
+      "GUID": "{2EF48DA8-421D-4825-BD4F-7CBE90209F86}",
+      "Color": "24"
+     },
+     {
+      "Id": "769541046",
+      "Name": "Bubbles",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Bubbles",
+      "GUID": "{35C37392-7DBC-4426-9BB7-231F0140A1C7}",
+      "Color": "26"
+     },
+     {
+      "Id": "884408238",
+      "Name": "Breath_Out_Slow",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_Out_Slow",
+      "GUID": "{555BEE63-5068-4617-B1F0-EBAD17C41F4F}",
+      "Color": "24"
+     },
+     {
+      "Id": "1740993339",
+      "Name": "Submerge",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Submerge",
+      "GUID": "{626D431D-FF8E-4A4D-9CDE-23BF2159366E}",
+      "Color": "26"
+     },
+     {
+      "Id": "1768652778",
+      "Name": "Emerge",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Emerge",
+      "GUID": "{8F76FAFA-31DE-4C0A-9BEE-68825A77B8C2}",
+      "Color": "26"
+     },
+     {
+      "Id": "2318812695",
+      "Name": "Breath_Out_Fast",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_Out_Fast",
+      "GUID": "{D462C932-AD40-4352-BA91-A4F2C4467840}",
+      "Color": "24"
+     },
+     {
+      "Id": "3286790596",
+      "Name": "Breath_In_Fast",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_In_Fast",
+      "GUID": "{1DC16507-B7F3-4B9C-9306-235354AC319C}",
+      "Color": "24"
+     },
+     {
+      "Id": "3602146812",
+      "Name": "Crucifix",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Crucifix",
+      "GUID": "{0F5FB86D-15C5-4087-B9FE-0012E7AE4AE0}",
+      "Color": "26"
+     },
+     {
+      "Id": "3768147567",
+      "Name": "Breath_In_Medium",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_In_Medium",
+      "GUID": "{1DD9C3DD-1147-4D4E-BCC0-BF0B8BF5813C}",
+      "Color": "24"
+     },
+     {
+      "Id": "3926837372",
+      "Name": "Breath_Out_Medium",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\BREATH\\Breath_Out_Medium",
+      "GUID": "{28CD858C-2C48-4C05-97DA-8D6C5A12A4F2}",
+      "Color": "24"
+     },
+     {
+      "Id": "4020135633",
+      "Name": "Iron_Hit",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Iron_Hit",
+      "GUID": "{E011DB61-1C96-4720-8FD6-DE115798E5A1}",
+      "Color": "26"
+     },
+     {
+      "Id": "4156400771",
+      "Name": "Dynamo",
+      "ObjectPath": "\\Triggers\\Default Work Unit\\STINGERS\\Dynamo",
+      "GUID": "{E951F759-877A-4705-A222-D68E33A974F0}",
+      "Color": "26"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D14BBD0F-5F19-2CEC-E85C-46CC12407BA0}"
+ }
+}
