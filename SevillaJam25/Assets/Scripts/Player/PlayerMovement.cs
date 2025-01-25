@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform boatSpot;
     public Transform seaSpot;
 
-    [SerializeField] private float speed_ = 2.0f;
+    [SerializeField] private float boatSpeed_= 4.0f;
     [SerializeField] private float gravity_ = -50f; // Aumentar gravedad para caída rápida
     private float verticalVelocity = 0f; // Control de velocidad en el eje Y
     private Inventory inventory;
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             forward.Normalize();
             right.Normalize();
 
-            Vector3 move = (right * xMov + forward * zMov).normalized * speed_ * Time.deltaTime;
+            Vector3 move = (right * xMov + forward * zMov).normalized * boatSpeed_ * Time.deltaTime;
 
             // APLICAMOS MOVIMIENTO EN X/Z Y MANTENEMOS Y
             position += new Vector3(move.x, 0, move.z); // Solo afecta X y Z
@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         // forward.Normalize();
         // right.Normalize();
 
-        // Vector3 move = (right * xMov + forward * yMov).normalized * speed_;
+        // Vector3 move = (right * xMov + forward * yMov).normalized * boatSpeed_;
         // controller_.Move(move * Time.deltaTime);
         HandleInput();
     }
