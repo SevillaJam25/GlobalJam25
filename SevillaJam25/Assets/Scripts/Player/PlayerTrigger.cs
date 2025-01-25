@@ -36,6 +36,11 @@ public class PlayerTrigger : MonoBehaviour
             string stylizedStr = $"<color=#cfba00>Subir hacia el barco</color>";
             onTriggerEnterWithElement.Invoke(stylizedStr);
         }
+
+        if (other.tag == "Selected")
+        {
+            onTriggerExitWithElement.Invoke();
+        }
     }
 
     void OnTriggerExit(Collider other)
