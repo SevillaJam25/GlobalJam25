@@ -54,7 +54,9 @@ public class PlayerMovement : MonoBehaviour
 
             if (PlayerTrigger.objectTriggered)
             {
-                this.inventory.selectObject(PlayerTrigger.objectTriggered);
+                if(this.inventory.selectObject(PlayerTrigger.objectTriggered)) {
+                    PlayerTrigger.objectTriggered = null;
+                }
             }
         }
 
