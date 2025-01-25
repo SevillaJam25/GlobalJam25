@@ -9,6 +9,7 @@ TagManager:
   - Ladder
   - Selected
   - EMF
+  - Platform
   layers:
   - Default
   - TransparentFX

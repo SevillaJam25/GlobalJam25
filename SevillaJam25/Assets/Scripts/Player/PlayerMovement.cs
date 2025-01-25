@@ -2,56 +2,109 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private CameraController cameraController;
-    private CharacterController controller_; //Moves game object in given direction
-    private Vector3 playerVelocity_;
-    private bool isGrounded_;
+    private CharacterController controller_;
     public Transform boatSpot;
-    [SerializeField] private float speed_ = 2.0f;
-    [SerializeField] private float gravity_ = -9.81f;
-    private Inventory inventory;
+    public Transform seaSpot;
 
-    Rigidbody rb;
+    [SerializeField] private float speed_ = 2.0f;
+    [SerializeField] private float gravity_ = -50f; // Aumentar gravedad para caída rápida
+    private float verticalVelocity = 0f; // Control de velocidad en el eje Y
+    private Inventory inventory;
+    [SerializeField] public GameObject boat;
+    private float rotationX = 0f;
+    private float rotationY = 0f;
+    public float Sensitivity
+    {
+        get { return sensitivity; }
+        set { sensitivity = value; }
+    }
+    private float startingPosY;
+    [Range(0f, 10f)][SerializeField] float sensitivity = 0.15f;
+    [Tooltip("Limits vertical camera rotation. Prevents the flipping that happens when rotation goes above 90.")]
+
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        cameraController = GetComponent<CameraController>();
+        startingPosY = transform.position.y;
         inventory = GetComponent<Inventory>();
         controller_ = gameObject.AddComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
     }
+
     void Update()
     {
-        // Usamos GetAxisRaw para obtener una respuesta instantánea
-        float xMov = Input.GetAxisRaw("Horizontal");
-        float yMov = Input.GetAxisRaw("Vertical");
+        if (PlayerTrigger.playerPosition.Equals(PlayerPosition.BOAT))
+        {
+            float mouseX = Input.GetAxis("Mouse X") * sensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
 
-        // Obtener la dirección de la cámara
-        Vector3 forward = Camera.main.transform.forward;
-        Vector3 right = Camera.main.transform.right;
+            rotationX -= mouseY;
+            rotationX = Mathf.Clamp(rotationX, -90f, 90f); // Limita la rotación en el eje X
 
-        // Asegurarse de que el movimiento sea horizontal y no afecte al eje Y
-        forward.y = 0;
-        right.y = 0f;
+            rotationY += mouseX;
 
-        // Normalizar las direcciones para evitar movimientos más rápidos en diagonales
-        forward.Normalize();
-        right.Normalize();
+            transform.rotation = Quaternion.Euler(rotationX, rotationY, 0f);
 
-        // Calcular el movimiento en base a la orientación de la cámara
-        Vector3 move = (right * xMov + forward * yMov).normalized;
+            // CALCULO DE POSICION Y -- SOBRE EL BARCO
+            Vector3 position = transform.position;
+            position.y = startingPosY + boat.transform.localPosition.y; // Mantiene la Y en relación al barco
 
-        // Mover al personaje
-        controller_.SimpleMove(move * Time.deltaTime * speed_);
+            // LEEMOS ENTRADA WASD
+            float xMov = Input.GetAxisRaw("Horizontal");
+            float zMov = Input.GetAxisRaw("Vertical");
+
+            Vector3 forward = transform.forward;
+            Vector3 right = transform.right;
+
+            forward.Normalize();
+            right.Normalize();
+
+            Vector3 move = (right * xMov + forward * zMov).normalized * speed_ * Time.deltaTime;
+
+            // APLICAMOS MOVIMIENTO EN X/Z Y MANTENEMOS Y
+            position += new Vector3(move.x, 0, move.z); // Solo afecta X y Z
+            transform.position = position;
+        }
+
+        else if (PlayerTrigger.playerPosition.Equals(PlayerPosition.SEA))
+        {
+
+        }
+
+        // UI OPENED
+
+        // Vector3 forward = transform.forward;
+        // Vector3 right = transform.right;
+
+        // forward.Normalize();
+        // right.Normalize();
+
+        // Vector3 move = (right * xMov + forward * yMov).normalized * speed_;
+        // controller_.Move(move * Time.deltaTime);
         HandleInput();
     }
 
     private void HandleInput()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (PlayerTrigger.ladderTriggered)
             {
-                transform.SetPositionAndRotation(boatSpot.position, transform.rotation);
+                if (PlayerTrigger.playerPosition == PlayerPosition.SEA)
+                {
+
+                    transform.SetPositionAndRotation(boatSpot.position, transform.rotation);
+                }
+                else
+                {
+                    transform.SetPositionAndRotation(seaSpot.position, transform.rotation);
+                }
             }
 
             if (PlayerTrigger.objectTriggered)
@@ -68,33 +121,18 @@ public class PlayerMovement : MonoBehaviour
             this.inventory.dropItem();
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             this.inventory.changeInventoryIndex(true);
         }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             this.inventory.changeInventoryIndex(false);
         }
 
-
-        if (Input.GetMouseButtonDown(0)) // 0 es el botón izquierdo
+        if (Input.GetMouseButtonDown(0))
         {
-            // Debug.Log("Clic izquierdo presionado");
             this.inventory.useObject();
         }
-
-        if (Input.GetMouseButton(0)) // Manteniendo presionado
-        {
-            // Debug.Log("Clic izquierdo mantenido");
-        }
-
-        if (Input.GetMouseButtonUp(0)) // Cuando se suelta
-        {
-            // Debug.Log("Clic izquierdo soltado");
-        }
-
-
     }
-
 }
