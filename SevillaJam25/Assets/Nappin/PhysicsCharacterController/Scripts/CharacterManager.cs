@@ -365,7 +365,7 @@ namespace PhysicsCharacterController
                 if (slopeHit.normal.y == 1)
                 {
 
-                    forward = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                    forward = Quaternion.Euler(0f, targetAngle, 0f) * characterCamera.transform.forward;
                     globalForward = forward;
                     reactionForward = forward;
 
@@ -482,9 +482,10 @@ namespace PhysicsCharacterController
             if (axisInput.magnitude > movementThrashold)
             {
                 targetAngle = Mathf.Atan2(axisInput.x, axisInput.y) * Mathf.Rad2Deg + characterCamera.transform.eulerAngles.y;
+                //targetAngle = Mathf.Atan2(axisInput.x, axisInput.y) * Mathf.Rad2Deg + characterCamera.transform.forward.y;
 
                 if (!sprint) rigidbody.linearVelocity = Vector3.SmoothDamp(rigidbody.linearVelocity, forward * movementSpeed * crouchMultiplier, ref currVelocity, dampSpeedUp);
-                else rigidbody.linearVelocity = Vector3.SmoothDamp(rigidbody.linearVelocity, forward * sprintSpeed * crouchMultiplier, ref currVelocity, dampSpeedUp);
+                else rigidbody.linearVelocity = Vector3.SmoothDamp(rigidbody.linearVelocity, characterCamera.transform.forward * sprintSpeed * crouchMultiplier, ref currVelocity, dampSpeedUp);
             }
             else rigidbody.linearVelocity = Vector3.SmoothDamp(rigidbody.linearVelocity, Vector3.zero * crouchMultiplier, ref currVelocity, dampSpeedDown);
         }
@@ -626,6 +627,7 @@ namespace PhysicsCharacterController
         #region GettersSetters
 
         public bool GetGrounded() { return isGrounded; }
+        public void SetGrounded(bool g) { isGrounded = g; }
         public bool GetTouchingSlope() { return isTouchingSlope; }
         public bool GetTouchingStep() { return isTouchingStep; }
         public bool GetTouchingWall() { return isTouchingWall; }

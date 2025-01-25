@@ -37,37 +37,37 @@ namespace PhysicsCharacterController
         private bool oldInput = true;
 
         //DISABLE if using old input system
-        private MovementActions movementActions;
+       // private MovementActions movementActions;
 
 
         /**/
 
 
-        //DISABLE if using old input system
-        private void Awake()
-        {
-            movementActions = new MovementActions();
+        ////DISABLE if using old input system
+        //private void Awake()
+        //{
+        //    movementActions = new MovementActions();
 
-            movementActions.Gameplay.Movement.performed += ctx => OnMove(ctx);
+        //    movementActions.Gameplay.Movement.performed += ctx => OnMove(ctx);
 
-            movementActions.Gameplay.Jump.performed += ctx => OnJump();
-            movementActions.Gameplay.Jump.canceled += ctx => JumpEnded();
+        //    movementActions.Gameplay.Jump.performed += ctx => OnJump();
+        //    movementActions.Gameplay.Jump.canceled += ctx => JumpEnded();
 
-            movementActions.Gameplay.Camera.performed += ctx => OnCamera(ctx);
+        //    movementActions.Gameplay.Camera.performed += ctx => OnCamera(ctx);
 
-            movementActions.Gameplay.Sprint.performed += ctx => OnSprint(ctx);
-            movementActions.Gameplay.Sprint.canceled += ctx => SprintEnded(ctx);
+        //    movementActions.Gameplay.Sprint.performed += ctx => OnSprint(ctx);
+        //    movementActions.Gameplay.Sprint.canceled += ctx => SprintEnded(ctx);
 
-            movementActions.Gameplay.Crouch.performed += ctx => OnCrouch(ctx);
-            movementActions.Gameplay.Crouch.canceled += ctx => CrouchEnded(ctx);
-        }
+        //    movementActions.Gameplay.Crouch.performed += ctx => OnCrouch(ctx);
+        //    movementActions.Gameplay.Crouch.canceled += ctx => CrouchEnded(ctx);
+        //}
 
 
         //ENABLE if using old input system
         private void Update()
         {
-            /*
-             
+
+
             axisInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0f).normalized;
 
             if (enableJump)
@@ -81,27 +81,27 @@ namespace PhysicsCharacterController
 
             GetDeviceOld();
 
-            */
+
         }
 
 
-        //DISABLE if using old input system
-        private void GetDeviceNew(InputAction.CallbackContext ctx)
-        {
-            oldInput = isMouseAndKeyboard;
+        ////DISABLE if using old input system
+        //private void GetDeviceNew(InputAction.CallbackContext ctx)
+        //{
+        //    oldInput = isMouseAndKeyboard;
 
-            if (ctx.control.device is Keyboard || ctx.control.device is Mouse) isMouseAndKeyboard = true;
-            else isMouseAndKeyboard = false;
+        //    if (ctx.control.device is Keyboard || ctx.control.device is Mouse) isMouseAndKeyboard = true;
+        //    else isMouseAndKeyboard = false;
 
-            if (oldInput != isMouseAndKeyboard && isMouseAndKeyboard) changedInputToMouseAndKeyboard.Invoke();
-            else if (oldInput != isMouseAndKeyboard && !isMouseAndKeyboard) changedInputToGamepad.Invoke();
-        }
+        //    if (oldInput != isMouseAndKeyboard && isMouseAndKeyboard) changedInputToMouseAndKeyboard.Invoke();
+        //    else if (oldInput != isMouseAndKeyboard && !isMouseAndKeyboard) changedInputToGamepad.Invoke();
+        //}
 
 
         //ENABLE if using old input system
         private void GetDeviceOld()
         {
-            /*
+
 
             oldInput = isMouseAndKeyboard;
 
@@ -111,18 +111,18 @@ namespace PhysicsCharacterController
             if (oldInput != isMouseAndKeyboard && isMouseAndKeyboard) changedInputToMouseAndKeyboard.Invoke();
             else if (oldInput != isMouseAndKeyboard && !isMouseAndKeyboard) changedInputToGamepad.Invoke();
 
-            */
+
         }
 
 
         #region Actions
 
         //DISABLE if using old input system
-        public void OnMove(InputAction.CallbackContext ctx)
-        {
-            axisInput = ctx.ReadValue<Vector2>();
-            GetDeviceNew(ctx);
-        }
+        //public void OnMove(InputAction.CallbackContext ctx)
+        //{
+        //    axisInput = ctx.ReadValue<Vector2>();
+        //    GetDeviceNew(ctx);
+        //}
 
 
         public void OnJump()
@@ -159,56 +159,56 @@ namespace PhysicsCharacterController
 
 
         //DISABLE if using old input system
-        public void OnCamera(InputAction.CallbackContext ctx)
-        {
-            GetDeviceNew(ctx);
-        }
+        //public void OnCamera(InputAction.CallbackContext ctx)
+        //{
+        //    GetDeviceNew(ctx);
+        //}
 
 
-        //DISABLE if using old input system
-        public void OnSprint(InputAction.CallbackContext ctx)
-        {
-            if (enableSprint) sprint = true;
-        }
+        ////DISABLE if using old input system
+        //public void OnSprint(InputAction.CallbackContext ctx)
+        //{
+        //    if (enableSprint) sprint = true;
+        //}
 
 
-        //DISABLE if using old input system
-        public void SprintEnded(InputAction.CallbackContext ctx)
-        {
-            sprint = false;
-        }
+        ////DISABLE if using old input system
+        //public void SprintEnded(InputAction.CallbackContext ctx)
+        //{
+        //    sprint = false;
+        //}
 
 
-        //DISABLE if using old input system
-        public void OnCrouch(InputAction.CallbackContext ctx)
-        {
-            if (enableCrouch) crouch = true;
-        }
+        ////DISABLE if using old input system
+        //public void OnCrouch(InputAction.CallbackContext ctx)
+        //{
+        //    if (enableCrouch) crouch = true;
+        //}
 
 
-        //DISABLE if using old input system
-        public void CrouchEnded(InputAction.CallbackContext ctx)
-        {
-            crouch = false;
-        }
+        ////DISABLE if using old input system
+        //public void CrouchEnded(InputAction.CallbackContext ctx)
+        //{
+        //    crouch = false;
+        //}
 
         #endregion
 
 
         #region Enable / Disable
 
-        //DISABLE if using old input system
-        private void OnEnable()
-        {
-            movementActions.Enable();
-        }
+        ////DISABLE if using old input system
+        //private void OnEnable()
+        //{
+        //    movementActions.Enable();
+        //}
 
 
-        //DISABLE if using old input system
-        private void OnDisable()
-        {
-            movementActions.Disable();
-        }
+        ////DISABLE if using old input system
+        //private void OnDisable()
+        //{
+        //    movementActions.Disable();
+        //}
 
         #endregion
     }
