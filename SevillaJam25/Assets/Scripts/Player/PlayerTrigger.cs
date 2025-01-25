@@ -17,6 +17,7 @@ public class PlayerTrigger : MonoBehaviour
     public static event OnTriggerExitWithElement onTriggerExitWithElement;
 <<<<<<< Updated upstream
 =======
+    public static PlayerPosition playerPosition = PlayerPosition.BOAT;
 >>>>>>> Stashed changes
     public static Object objectTriggered;
     public static bool ladderTriggered;
