@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
         return null;  // Si no se encuentra ningún índice vacío
     }
 
-    private void addObject(Object obj)
+    private bool addObject(Object obj)
     {
         var firstIndex = getFirstEmptyIndex();
 
@@ -35,10 +35,13 @@ public class Inventory : MonoBehaviour
             objectsInventory[firstIndex.Value] = obj;
             obj.takeObject(transform);
             texts[firstIndex.Value].text = obj.name;
+            setIndex(firstIndex.Value);
+            return true;
         }
         else
         {
             Debug.Log("No hay espacio en inventario");
+            return false;
         }
     }
 
@@ -76,13 +79,14 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void selectObject(Object obj)
+    public bool selectObject(Object obj)
     {
-        addObject(obj);
+        return addObject(obj);
     }
 
     public void dropItem()
     {
+        if(!this.objectsInventory[inventoryIndex]) return;
         this.texts[inventoryIndex].text = "Empty";
         this.objectsInventory[inventoryIndex] = null;
         selectedObject.drop();
