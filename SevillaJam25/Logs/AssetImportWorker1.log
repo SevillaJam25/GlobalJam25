@@ -1,29 +1,29 @@
 Using pre-set license
 Built from '6000.0/staging' branch; Version is '6000.0.24f1 (11fa355cd605) revision 1178165'; Using compiler version '193933523'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'en' Physical Memory: 15789 MB
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'es' Physical Memory: 16183 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Users\Bruno\Documents\ABERTAY\UNITY\6000.0.24f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\6000.0.24f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/Bruno/Documents/Portfolio/SevillaJam25/SevillaJam25
+C:/Users/adria/OneDrive/Documentos/GitHub/GlobalJam25/SevillaJam25
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-60853
+65331
 -job-worker-count
-7
+3
 -background-job-worker-count
 8
 -asset-garbage-collectors
 1
-Successfully changed project path to: C:/Users/Bruno/Documents/Portfolio/SevillaJam25/SevillaJam25
-C:/Users/Bruno/Documents/Portfolio/SevillaJam25/SevillaJam25
+Successfully changed project path to: C:/Users/adria/OneDrive/Documentos/GitHub/GlobalJam25/SevillaJam25
+C:/Users/adria/OneDrive/Documentos/GitHub/GlobalJam25/SevillaJam25
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -59,13 +59,15 @@ C:/Users/Bruno/Documents/Portfolio/SevillaJam25/SevillaJam25
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [22864]  Target information:
+Player connection [4088]  Target information:
 
-Player connection [22864]  * "[IP] 10.188.7.243 [Port] 0 [Flags] 2 [Guid] 3555104834 [EditorId] 3555104834 [Version] 1048832 [Id] WindowsEditor(7,rust1109) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [4088]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3154067321 [EditorId] 3154067321 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-GJPU02E) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [22864] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [22864] Host joined alternative multi-casting on [225.0.0.222:34997]...
-JobSystem: Creating JobQueue using job-worker-count value 7
+Player connection [4088]  * "[IP] 10.188.154.56 [Port] 0 [Flags] 2 [Guid] 3154067321 [EditorId] 3154067321 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-GJPU02E) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [4088] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [4088] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 3
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
 Library Redirect Path: Library/
@@ -75,59 +77,59 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 1.36 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.85 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.24f1 (11fa355cd605)
-[Subsystems] Discovering subsystems at path C:/Users/Bruno/Documents/ABERTAY/UNITY/6000.0.24f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Bruno/Documents/Portfolio/SevillaJam25/SevillaJam25/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.24f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/adria/OneDrive/Documentos/GitHub/GlobalJam25/SevillaJam25/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f15)
-    Vendor:   NVIDIA
-    VRAM:     5955 MB
-    Driver:   31.0.15.5186
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
+    Vendor:   Intel
+    VRAM:     8091 MB
+    Driver:   30.0.101.1692
 Initialize mono
-Mono path[0] = 'C:/Users/Bruno/Documents/ABERTAY/UNITY/6000.0.24f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Users/Bruno/Documents/ABERTAY/UNITY/6000.0.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Users/Bruno/Documents/ABERTAY/UNITY/6000.0.24f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56544
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.24f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.24f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56000
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Users/Bruno/Documents/ABERTAY/UNITY/6000.0.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002964 seconds.
-- Loaded All Assemblies, in  0.453 seconds
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.179070 seconds.
+- Loaded All Assemblies, in  1.139 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.435 seconds
-Domain Reload Profiling: 885ms
-	BeginReloadAssembly (168ms)
+- Finished resetting the current domain, in  0.885 seconds
+Domain Reload Profiling: 2014ms
+	BeginReloadAssembly (233ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (41ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (54ms)
-	LoadAllAssembliesAndSetupDomain (173ms)
-		LoadAssemblies (162ms)
+	RebuildCommonClasses (120ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (433ms)
+	LoadAllAssembliesAndSetupDomain (323ms)
+		LoadAssemblies (228ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (170ms)
-			TypeCache.Refresh (168ms)
-				TypeCache.ScanAssembly (154ms)
+		AnalyzeDomain (319ms)
+			TypeCache.Refresh (316ms)
+				TypeCache.ScanAssembly (283ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (435ms)
+	FinalizeReload (886ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (392ms)
+		SetupLoadedEditorAssemblies (675ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (33ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (9ms)
-			ProcessInitializeOnLoadAttributes (254ms)
-			ProcessInitializeOnLoadMethodAttributes (85ms)
+			InitializePlatformSupportModulesInManaged (70ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (12ms)
+			ProcessInitializeOnLoadAttributes (469ms)
+			ProcessInitializeOnLoadMethodAttributes (110ms)
 			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -136,104 +138,96 @@ Domain Reload Profiling: 885ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.096 seconds
-Refreshing native plugins compatible for Editor in 1.00 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.199 seconds
+Refreshing native plugins compatible for Editor in 1.03 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.961 seconds
-Domain Reload Profiling: 2053ms
-	BeginReloadAssembly (463ms)
+- Finished resetting the current domain, in  1.300 seconds
+Domain Reload Profiling: 2493ms
+	BeginReloadAssembly (524ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (41ms)
 	RebuildCommonClasses (42ms)
 	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (42ms)
-	LoadAllAssembliesAndSetupDomain (531ms)
-		LoadAssemblies (425ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (565ms)
+		LoadAssemblies (429ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (237ms)
-			TypeCache.Refresh (180ms)
-				TypeCache.ScanAssembly (164ms)
-			BuildScriptInfoCaches (49ms)
+		AnalyzeDomain (268ms)
+			TypeCache.Refresh (192ms)
+				TypeCache.ScanAssembly (174ms)
+			BuildScriptInfoCaches (67ms)
 			ResolveRequiredComponents (5ms)
-	FinalizeReload (962ms)
+	FinalizeReload (1300ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (728ms)
+		SetupLoadedEditorAssemblies (967ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (101ms)
-			ProcessInitializeOnLoadAttributes (580ms)
-			ProcessInitializeOnLoadMethodAttributes (28ms)
-			AfterProcessingInitializeOnLoad (9ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (74ms)
+			ProcessInitializeOnLoadAttributes (832ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
+			AfterProcessingInitializeOnLoad (12ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3662 unused Assets / (1.1 MB). Loaded Objects now: 4249.
-Memory consumption went from 110.7 MB to 109.6 MB.
-Total: 8.389000 ms (FindLiveObjects: 0.606500 ms CreateObjectMapping: 0.653800 ms MarkObjects: 5.556700 ms  DeleteObjects: 1.570200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 505275.302908 seconds.
-  path: Assets/Scripts/Player/CameraController.cs
-  artifactKey: Guid(70ff1f05f5849af4db5ee750405bdcf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player/CameraController.cs using Guid(70ff1f05f5849af4db5ee750405bdcf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7b6e2d2deb5addd8efab5afa85f9a941') in 0.0078501 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+Unloading 3662 unused Assets / (1.0 MB). Loaded Objects now: 4249.
+Memory consumption went from 108.4 MB to 107.3 MB.
+Total: 8.974900 ms (FindLiveObjects: 0.447200 ms CreateObjectMapping: 0.299700 ms MarkObjects: 6.167500 ms  DeleteObjects: 2.057700 ms)
 
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.740 seconds
-Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.778 seconds
+Refreshing native plugins compatible for Editor in 3.77 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.904 seconds
-Domain Reload Profiling: 1643ms
-	BeginReloadAssembly (210ms)
+- Finished resetting the current domain, in  2.800 seconds
+Domain Reload Profiling: 3575ms
+	BeginReloadAssembly (238ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (55ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (28ms)
-	LoadAllAssembliesAndSetupDomain (435ms)
-		LoadAssemblies (372ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (439ms)
+		LoadAssemblies (388ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (169ms)
-			TypeCache.Refresh (6ms)
+		AnalyzeDomain (187ms)
+			TypeCache.Refresh (9ms)
 				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (155ms)
+			BuildScriptInfoCaches (170ms)
 			ResolveRequiredComponents (5ms)
-	FinalizeReload (905ms)
+	FinalizeReload (2801ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (679ms)
+		SetupLoadedEditorAssemblies (2125ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (106ms)
-			ProcessInitializeOnLoadAttributes (528ms)
-			ProcessInitializeOnLoadMethodAttributes (25ms)
-			AfterProcessingInitializeOnLoad (10ms)
-			EditorAssembliesLoaded (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (15ms)
+			BeforeProcessingInitializeOnLoad (156ms)
+			ProcessInitializeOnLoadAttributes (1853ms)
+			ProcessInitializeOnLoadMethodAttributes (64ms)
+			AfterProcessingInitializeOnLoad (29ms)
+			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (18ms)
+Refreshing native plugins compatible for Editor in 3.37 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3660 unused Assets / (1.0 MB). Loaded Objects now: 4252.
-Memory consumption went from 108.9 MB to 107.9 MB.
-Total: 7.875800 ms (FindLiveObjects: 0.492600 ms CreateObjectMapping: 0.328900 ms MarkObjects: 5.357600 ms  DeleteObjects: 1.694600 ms)
+Unloading 3660 unused Assets / (1.1 MB). Loaded Objects now: 4250.
+Memory consumption went from 107.9 MB to 106.8 MB.
+Total: 19.498700 ms (FindLiveObjects: 0.635200 ms CreateObjectMapping: 0.589700 ms MarkObjects: 13.811700 ms  DeleteObjects: 4.452600 ms)
 
 Prepare: number of updated asset objects reloaded= 0
