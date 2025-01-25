@@ -47,7 +47,6 @@ namespace PhysicsCharacterController
 
             thirdPersonCameraController = thirdPersonCamera.GetComponent<ThirdPersonCameraController>();
 
-
             SetCamera();
             SetDebug();
         }
@@ -90,31 +89,28 @@ namespace PhysicsCharacterController
 
         public void SetCamera()
         {
+            if (activeThirdPerson)
+            {
+                characterManager.SetLockToCamera(false);
+
+                firstPersonCamera.gameObject.SetActive(false);
+                thirdPersonCamera.gameObject.SetActive(true);
+
+                thirdPersonCameraController.SetInitialValue(firstPersonCameraControllerPOV.m_HorizontalAxis.Value, thirdPersonHeightOnTransition);
+
+                StartCoroutine(UpdateMask(thirdPersonMaskChangeDelay, thirdPersonMask));
+            }
+            else
+            {
+                characterManager.SetLockToCamera(true);
+
                 firstPersonCamera.gameObject.SetActive(true);
-            firstPersonCameraController.SetInitialValue(thirdPersonCamera.m_XAxis.Value, firstPersonHeightOnTransition);
+                thirdPersonCamera.gameObject.SetActive(false);
 
-            //if (activeThirdPerson)
-            //{
-            //    characterManager.SetLockToCamera(false);
+                firstPersonCameraController.SetInitialValue(thirdPersonCamera.m_XAxis.Value, firstPersonHeightOnTransition);
 
-            //    firstPersonCamera.gameObject.SetActive(false);
-            //    thirdPersonCamera.gameObject.SetActive(true);
-
-            //    thirdPersonCameraController.SetInitialValue(firstPersonCameraControllerPOV.m_HorizontalAxis.Value, thirdPersonHeightOnTransition);
-
-            //    StartCoroutine(UpdateMask(thirdPersonMaskChangeDelay, thirdPersonMask));
-            //}
-            //else
-            //{
-            //    characterManager.SetLockToCamera(true);
-
-            //    firstPersonCamera.gameObject.SetActive(true);
-            //    thirdPersonCamera.gameObject.SetActive(false);
-
-            //    firstPersonCameraController.SetInitialValue(thirdPersonCamera.m_XAxis.Value, firstPersonHeightOnTransition);
-
-            //    StartCoroutine(UpdateMask(firstPersonMaskChangeDelay, firstPersonMask));
-            //}
+                StartCoroutine(UpdateMask(firstPersonMaskChangeDelay, firstPersonMask));
+            }
         }
 
 
