@@ -2,45 +2,44 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private CameraController cameraController;
     private CharacterController controller_; //Moves game object in given direction
     private Vector3 playerVelocity_;
     private bool isGrounded_;
     public Transform boatSpot;
     [SerializeField] private float speed_ = 2.0f;
-    [SerializeField] private float jumpHeight_ = 1.0f;
     [SerializeField] private float gravity_ = -9.81f;
-    //[SerializeField] private Camera camera_;
     private Inventory inventory;
 
     void Start()
-    {//Init char controller
-        controller_ = gameObject.AddComponent<CharacterController>();
+    {
+        cameraController = GetComponent<CameraController>();
         inventory = GetComponent<Inventory>();
-        //camera_ = gameObject.GetComponentInChildren<Camera>();
+        controller_ = gameObject.AddComponent<CharacterController>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        isGrounded_ = controller_.isGrounded;
-        if (isGrounded_ && playerVelocity_.y < 0) playerVelocity_.y = 0;
+        // Usamos GetAxisRaw para obtener una respuesta instantánea
+        float xMov = Input.GetAxisRaw("Horizontal");
+        float yMov = Input.GetAxisRaw("Vertical");
 
-        //Movement in two axis
-        float xMov = Input.GetAxis("Horizontal");
-        float yMov = Input.GetAxis("Vertical");
-        Vector3 move = new Vector3(xMov, 0, yMov);
-        //Quaternion camRot = Quaternion.Euler(0, camera_.transform.eulerAngles.y, 0);
-        controller_.Move(/*camRot **/ move * Time.deltaTime * speed_);
-        //if (move != Vector3.zero)
-        //{
-        //    gameObject.transform.forward = move; //Probably will change this for backwards movement
-        //}
-        if (Input.GetButtonDown("Jump") && !isGrounded_)
-        {
-            playerVelocity_.y += Mathf.Sqrt(jumpHeight_ * -2.0f * gravity_);
-        }
-        playerVelocity_.y += gravity_ * Time.deltaTime;
-        controller_.Move(playerVelocity_ * Time.deltaTime);
+        // Obtener la dirección de la cámara
+        Vector3 forward = Camera.main.transform.forward;
+        Vector3 right = Camera.main.transform.right;
+
+        // Asegurarse de que el movimiento sea horizontal y no afecte al eje Y
+        forward.y = 0f;
+        right.y = 0f;
+
+        // Normalizar las direcciones para evitar movimientos más rápidos en diagonales
+        forward.Normalize();
+        right.Normalize();
+
+        // Calcular el movimiento en base a la orientación de la cámara
+        Vector3 move = (right * xMov + forward * yMov).normalized;
+
+        // Mover al personaje
+        controller_.Move(move * Time.deltaTime * speed_);
         HandleInput();
     }
 

@@ -1730,7 +1730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatSpot: {fileID: 251185963}
-  speed_: 10
+  speed_: 5
   jumpHeight_: 1
   gravity_: -9.81
 --- !u!136 &1291190176
