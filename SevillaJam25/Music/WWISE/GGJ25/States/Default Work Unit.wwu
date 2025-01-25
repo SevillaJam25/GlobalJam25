@@ -10,6 +10,7 @@
 						<State Name="Surface" ID="{042E865D-C32B-41D0-86CE-0BEB2DEB9551}"/>
 						<State Name="Depths_Mid" ID="{F30C373D-7DF8-4BB9-A049-2DB2FF7C1D5B}"/>
 						<State Name="Depths_Low" ID="{022E4662-8A22-4029-A752-B33C3589BE09}"/>
+						<State Name="Main_Menu" ID="{F4FF80F7-33D3-4C9F-A2AC-C4446590ECDB}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
