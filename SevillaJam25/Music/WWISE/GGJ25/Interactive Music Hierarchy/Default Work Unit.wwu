@@ -1571,6 +1571,98 @@
 										</Folder>
 									</ChildrenList>
 								</MusicSwitchContainer>
+								<MusicSwitchContainer Name="00_Main_Menu" ID="{B001B317-D823-432E-9C60-19A1EDBEDCC2}" ShortID="312334539">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{66791A7F-C6CA-4D98-BCDC-8F09A0BD6477}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{70ADC379-D2F2-43CF-8EC9-5059860A83B1}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{56E55450-F00D-4C82-AE6B-8CE8E194C8E9}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ChildrenList>
+														<MusicTransition Name="Transition" ID="{499801F9-0275-4FF1-BD0C-AD2ACEC146BA}">
+															<TransitionInfo/>
+														</MusicTransition>
+													</ChildrenList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicPlaylistContainer Name="Main_Menu" ID="{F5F6E4E9-4649-4462-A8AE-4105032F559F}" ShortID="281539456">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{66791A7F-C6CA-4D98-BCDC-8F09A0BD6477}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{70ADC379-D2F2-43CF-8EC9-5059860A83B1}"/>
+												</Reference>
+												<Reference Name="PlaylistRoot">
+													<Custom>
+														<MusicPlaylistItem Name="" ID="{26459827-1CD4-4427-8663-82F0EC131AE8}" ShortID="137394683"/>
+													</Custom>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{C25B3AAD-5C88-426E-9A02-C9A6BCE90403}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<ChildrenList>
+																<MusicTransition Name="Transition" ID="{8DD473A0-F2F3-45C2-A291-7AB0A3E3E3CB}">
+																	<TransitionInfo/>
+																</MusicTransition>
+															</ChildrenList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicSegment Name="main_menu" ID="{BC4D902C-A987-4E65-9AB9-B84AA1FB073F}" ShortID="517553160">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{66791A7F-C6CA-4D98-BCDC-8F09A0BD6477}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{70ADC379-D2F2-43CF-8EC9-5059860A83B1}"/>
+														</Reference>
+													</ReferenceList>
+													<ObjectLists>
+														<ObjectList Name="Cues">
+															<Reference>
+																<Local>
+																	<MusicCue Name="Entry Cue" ID="{49342B87-258B-4ABD-87A8-8F25097DDA78}"/>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicCue Name="Exit Cue" ID="{727CFCE8-F409-447F-BFE5-0B72C3DE0B4B}">
+																		<PropertyList>
+																			<Property Name="CueType" Type="int16" Value="1"/>
+																			<Property Name="TimeMs" Type="Real64" Value="1000"/>
+																		</PropertyList>
+																	</MusicCue>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicSegment>
+											</ChildrenList>
+										</MusicPlaylistContainer>
+									</ChildrenList>
+								</MusicSwitchContainer>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="Arguments">
@@ -1645,6 +1737,24 @@
 													<ObjectList Name="EntryPath">
 														<Reference>
 															<ObjectRef Name="Depths_Low" ID="{022E4662-8A22-4029-A752-B33C3589BE09}" WorkUnitID="{F0FAA444-4399-40EB-AD00-D8FF9DA0CDAB}"/>
+														</Reference>
+													</ObjectList>
+												</ObjectLists>
+											</MultiSwitchEntry>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MultiSwitchEntry Name="" ID="{450DF0FC-9157-4A70-893E-125A21DEFB37}">
+												<ReferenceList>
+													<Reference Name="AudioNode">
+														<ObjectRef Name="00_Main_Menu" ID="{B001B317-D823-432E-9C60-19A1EDBEDCC2}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
+													</Reference>
+												</ReferenceList>
+												<ObjectLists>
+													<ObjectList Name="EntryPath">
+														<Reference>
+															<ObjectRef Name="Main_Menu" ID="{F4FF80F7-33D3-4C9F-A2AC-C4446590ECDB}" WorkUnitID="{F0FAA444-4399-40EB-AD00-D8FF9DA0CDAB}"/>
 														</Reference>
 													</ObjectList>
 												</ObjectLists>
@@ -2136,9 +2246,7 @@
 								<ObjectList Name="Stingers">
 									<Reference>
 										<Local>
-											<MusicStinger Name="" ID="{55EE2E3B-018A-401C-8A17-2863AAE6939D}">
-												<ReferenceList/>
-											</MusicStinger>
+											<MusicStinger Name="" ID="{55EE2E3B-018A-401C-8A17-2863AAE6939D}"/>
 										</Local>
 									</Reference>
 									<Reference>
