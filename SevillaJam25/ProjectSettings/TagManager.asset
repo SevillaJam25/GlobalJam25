@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Sea
+  - Object
+  - Ladder
   layers:
   - Default
   - TransparentFX
