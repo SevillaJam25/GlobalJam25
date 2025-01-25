@@ -5,25 +5,22 @@ using Unity.VisualScripting;
 
 public class PlayerTrigger : MonoBehaviour
 {
-    public delegate void OnSeaEnter ();  
-    public static event OnSeaEnter onSeaEnter;  
-    public delegate void OnSeaLeave ();  
+    public delegate void OnSeaEnter();
+    public static event OnSeaEnter onSeaEnter;
+    public delegate void OnSeaLeave();
     public static event OnSeaLeave onSeaLeave;
-    public static PlayerPosition playerPosition = PlayerPosition.BOAT;  
-
     public delegate void OnTriggerEnterWithElement(string infoText);
     public static event OnTriggerEnterWithElement onTriggerEnterWithElement;
     public delegate void OnTriggerExitWithElement();
     public static event OnTriggerExitWithElement onTriggerExitWithElement;
-<<<<<<< Updated upstream
-=======
     public static PlayerPosition playerPosition = PlayerPosition.BOAT;
->>>>>>> Stashed changes
+
     public static Object objectTriggered;
     public static bool ladderTriggered;
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="Sea") {
+        if (other.tag == "Sea")
+        {
             playerPosition = PlayerPosition.SEA;
             onSeaEnter.Invoke();
         }
@@ -43,7 +40,8 @@ public class PlayerTrigger : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if(other.tag=="Sea") {
+        if (other.tag == "Sea")
+        {
             playerPosition = PlayerPosition.BOAT;
             onSeaLeave.Invoke();
         }

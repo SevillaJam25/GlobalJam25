@@ -48,7 +48,6 @@ public class Ghost : MonoBehaviour
     private int getNextActivity(float probabilityUp) {
         float valGenerated = Random.value;
         float solution = probabilityUp-valGenerated;
-        Debug.Log("prob: "+valGenerated+" change: "+solution);
         if(Math.Abs(solution) == 0.1) {
             return 1;
         } else if(solution < 0) {
