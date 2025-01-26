@@ -22,9 +22,9 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSmoothness = 10.2f;  // Cuanto más alto, más rápida la rotación
     public float movementSpeed = 3.95f;        // Velocidad de movimiento
 
-    public float seaSpeed = 5f;         // Velocidad base en el agua
+    public float seaSpeed = 32f;         // Velocidad base en el agua
     public float sinkSpeed = 4f;        // Velocidad de caída en el agua
-    public float riseSpeed = 2f;        // Velocidad al subir en el agua (más lento que bajar)
+    public float riseSpeed = 1f;        // Velocidad al subir en el agua (más lento que bajar)
     public float movementSmoothness = 10f;
 
     [Range(0f, 20f)][SerializeField] float sensitivity = 2f;
@@ -63,13 +63,10 @@ public class PlayerMovement : MonoBehaviour
         {
             RenderSettings.fog = false;
 
-            // Mantener la altura relativa al barco
-            Vector3 position = transform.position;
-            position.y = startingPosY + boat.transform.localPosition.y;
-
             // Calcular dirección de movimiento normalizada
-            Vector3 moveDirection = (transform.right * moveVertical + transform.forward * moveHorizontal).normalized;
-            Vector3 targetPosition = position + moveDirection * boatSpeed_ * Time.deltaTime;
+            Vector3 moveDirection = (transform.right * moveHorizontal + transform.forward * moveVertical).normalized;
+            Vector3 targetPosition = transform.position + moveDirection * boatSpeed_ * Time.deltaTime;
+            targetPosition.y=startingPosY;
 
             // Aplicar movimiento con MoveTowards para mayor responsividad
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * movementSpeed);
@@ -80,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         {
             RenderSettings.fog = true;
             RenderSettings.fogColor = new Color(0.1f, 0.4f, 0.6f, 1f); // Azul verdoso para simular el agua
-            RenderSettings.fogDensity = 0.005f; // Ajusta para mayor o menor visibilidad
+            RenderSettings.fogDensity = 0.002f; // Ajusta para mayor o menor visibilidad
 
             // Dirección de movimiento basada en la orientación de la cámara
             Vector3 moveDirection = transform.TransformDirection(new Vector3(moveHorizontal, 0, moveVertical)).normalized;
@@ -98,12 +95,6 @@ public class PlayerMovement : MonoBehaviour
             // Aplicar fuerza de gravedad marina
             float depthFactor = Mathf.Clamp(Vector3.Dot(transform.forward, Vector3.down), -1f, 1f);
             float gravityEffect = Mathf.Lerp(sinkSpeed, riseSpeed, (depthFactor + 1) / 2);
-
-            // Reducimos el efecto de la gravedad si el jugador está subiendo
-            // if (moveVertical > 0)
-            // {
-            //     gravityEffect *= 0.6f; // La gravedad tiene menos efecto si subimos
-            // }
 
             Vector3 gravityForce = Vector3.down * gravityEffect * Time.deltaTime;
 
