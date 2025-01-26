@@ -2,6 +2,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class HandObject
+{
+    public ObjectsTypes type;
+    public GameObject handObject;
+}
+
+
 public class Inventory : MonoBehaviour
 {
     private List<Object> objectsInventory;
@@ -9,6 +17,7 @@ public class Inventory : MonoBehaviour
     private int inventoryIndex = 0;
     [SerializeField] public int inventorySize = 3;
     [SerializeField] public List<Text> texts;
+    [SerializeField] public List<HandObject> Hands;
 
     private ObjectUseManager objectUseManager;
     public void Awake()
@@ -26,6 +35,18 @@ public class Inventory : MonoBehaviour
             }
         }
         return null;  // Si no se encuentra ningún índice vacío
+    }
+
+    public GameObject searchHandGameObject(ObjectsTypes objType)
+    {
+        for (int i = 0; i < Hands.Count; i++)
+        {
+            if (Hands[i].type == objType)
+            {
+                return Hands[i].handObject;
+            }
+        }
+        return null;
     }
 
     private bool addObject(Object obj)
@@ -54,6 +75,8 @@ public class Inventory : MonoBehaviour
         string noStylizedStr = $"Empty";
         if (selectedObject)
         {
+            GameObject obj = searchHandGameObject(selectedObject.type);
+            obj.SetActive(false);
             noStylizedStr = $"{selectedObject.objectName}";
         }
         this.texts[inventoryIndex].text = noStylizedStr;
@@ -63,6 +86,8 @@ public class Inventory : MonoBehaviour
         string stylizedStr = $"<color=#cfba00>Empty</color>";
         if (selectedObject)
         {
+            GameObject obj = searchHandGameObject(selectedObject.type);
+            obj.SetActive(true);
             stylizedStr = $"<color=#cfba00>{selectedObject.objectName}</color>";
         }
 
@@ -91,6 +116,7 @@ public class Inventory : MonoBehaviour
     {
         if (!this.objectsInventory[inventoryIndex]) return;
         this.texts[inventoryIndex].text = "Empty";
+        searchHandGameObject(this.objectsInventory[inventoryIndex].type).SetActive(false);
         this.objectsInventory[inventoryIndex] = null;
         selectedObject.drop();
     }
