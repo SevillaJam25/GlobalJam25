@@ -1,21 +1,21 @@
 using System.Collections;
 using UnityEngine;
 
+[System.Serializable]
+public class EMFTextures
+{
+    public int num;
+    public Texture2D texture;
+}
+
 public class ObjectUseManager : MonoBehaviour
 {
-    public int current;
     private bool isUsedEMF = false;
     private bool isUsedLantern = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        PlayerTrigger.onEnterEMFArea += enterEMFArea;
         Object.onObjectUse += manageAction;
-    }
-
-    private void enterEMFArea(int area)
-    {
-        this.current = 1;
     }
 
     private IEnumerator EMF()
