@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,7 +32,12 @@ public class OxygenSystem : MonoBehaviour
     public Text uiOxygenLeft;
 
     private bool isBreating = false;
-
+    [SerializeField] ParticleSystem bubbles; 
+    private void Start()
+    {
+        bubbles.Stop();    
+    }
+    
     private void OnEnable()
     {
         uiBreathState.text = "SURFACE";
@@ -39,6 +45,7 @@ public class OxygenSystem : MonoBehaviour
         PlayerTrigger.onSeaEnter += StartSubmersion;
         PlayerTrigger.onSeaLeave += StopSubmersion;
         OxygenLeft = OxygenCapacity;
+        
     }
 
     private void StartSubmersion()
@@ -46,12 +53,14 @@ public class OxygenSystem : MonoBehaviour
         if(!isBreating) {
             StartCoroutine("Breath");
         }
+        bubbles.Play();
     }
 
     private void StopSubmersion()
     {
         updateOxygen(100f);
         changeState(BreahStates.SURFACE);
+        bubbles.Stop();
         isBreating = false;
         StopCoroutine("Breath");
     }
