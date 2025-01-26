@@ -68,4 +68,10 @@ public class PlayerTrigger : MonoBehaviour
             onTriggerExitWithElement.Invoke();
         }
     }
+
+    public static void resetTriggerObject()
+    {
+        objectTriggered = null;
+        onTriggerExitWithElement.Invoke();
+    }
 }

@@ -27,7 +27,7 @@ namespace PhysicsCharacterController
         public float thirdPersonHeightOnTransition = 0.5f;
         [Space(10)]
 
-        public bool activeThirdPerson = true;
+        public bool activeThirdPerson = false;
         public bool activeDebug = true;
 
 
@@ -35,10 +35,6 @@ namespace PhysicsCharacterController
         private CinemachinePOV firstPersonCameraControllerPOV;
 
         private ThirdPersonCameraController thirdPersonCameraController;
-
-
-        /**/
-
 
         private void Awake()
         {
@@ -52,43 +48,9 @@ namespace PhysicsCharacterController
         }
 
 
-        private void Update()
-        {
-            //DISABLE if using old input system
-
-            if (Keyboard.current.mKey.wasPressedThisFrame)
-            {
-                activeThirdPerson = !activeThirdPerson;
-                SetCamera();
-            }
-
-            //DISABLE if using old input system
-            if (Keyboard.current.nKey.wasPressedThisFrame)
-            {
-                SetDebug();
-            }
-
-            //ENABLE if using old input system
-
-            /*
-
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                activeThirdPerson = !activeThirdPerson;
-                SetCamera();
-            }
-
-            if (Input.GetKeyDown(KeyCode.N))
-            {
-                SetDebug();
-            }
-
-            */
-        }
-
-
         public void SetCamera()
         {
+            activeThirdPerson = false;
             if (activeThirdPerson)
             {
                 characterManager.SetLockToCamera(false);
