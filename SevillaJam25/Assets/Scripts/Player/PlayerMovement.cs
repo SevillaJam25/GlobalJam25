@@ -63,13 +63,10 @@ public class PlayerMovement : MonoBehaviour
         {
             RenderSettings.fog = false;
 
-            // Mantener la altura relativa al barco
-            Vector3 position = transform.position;
-            position.y = startingPosY + boat.transform.localPosition.y;
-
             // Calcular dirección de movimiento normalizada
             Vector3 moveDirection = (transform.right * moveHorizontal + transform.forward * moveVertical).normalized;
-            Vector3 targetPosition = position + moveDirection * boatSpeed_ * Time.deltaTime;
+            Vector3 targetPosition = transform.position + moveDirection * boatSpeed_ * Time.deltaTime;
+            targetPosition.y=startingPosY;
 
             // Aplicar movimiento con MoveTowards para mayor responsividad
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * movementSpeed);
