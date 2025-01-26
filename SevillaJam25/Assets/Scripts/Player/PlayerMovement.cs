@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform boatSpot;
     public Transform seaSpot;
 
-    [SerializeField] private float boatSpeed_= 4.0f;
-    [SerializeField] private float gravity_ = -50f; // Aumentar gravedad para caída rápida
+    [SerializeField] private float boatSpeed_ = 2.95f;
+    [SerializeField] private float gravity_ = 8.5f; // Aumentar gravedad para caída rápida
     private float verticalVelocity = 0f; // Control de velocidad en el eje Y
     private Inventory inventory;
     [SerializeField] public GameObject boat;
@@ -19,7 +19,15 @@ public class PlayerMovement : MonoBehaviour
         set { sensitivity = value; }
     }
     private float startingPosY;
-    [Range(0f, 10f)][SerializeField] float sensitivity = 0.15f;
+    public float rotationSmoothness = 10.2f;  // Cuanto más alto, más rápida la rotación
+    public float movementSpeed = 3.95f;        // Velocidad de movimiento
+
+    public float seaSpeed = 5f;         // Velocidad base en el agua
+    public float sinkSpeed = 4f;        // Velocidad de caída en el agua
+    public float riseSpeed = 2f;        // Velocidad al subir en el agua (más lento que bajar)
+    public float movementSmoothness = 10f;
+
+    [Range(0f, 20f)][SerializeField] float sensitivity = 2f;
     [Tooltip("Limits vertical camera rotation. Prevents the flipping that happens when rotation goes above 90.")]
 
     void Start()
@@ -36,40 +44,64 @@ public class PlayerMovement : MonoBehaviour
     {
         if (PlayerTrigger.playerPosition.Equals(PlayerPosition.BOAT))
         {
+            // Capturar entrada del mouse sin multiplicar por deltaTime
             float mouseX = Input.GetAxis("Mouse X") * sensitivity;
             float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
 
-            rotationX -= mouseY;
-            rotationX = Mathf.Clamp(rotationX, -90f, 90f); // Limita la rotación en el eje X
-
+            // Aplicar límites a la rotación en X (mirada vertical)
+            rotationX = Mathf.Clamp(rotationX - mouseY, -90f, 90f);
             rotationY += mouseX;
 
-            transform.rotation = Quaternion.Euler(rotationX, rotationY, 0f);
+            // Suavizar la rotación con Slerp, aumentando la velocidad
+            Quaternion targetRotation = Quaternion.Euler(rotationX, rotationY, 0f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothness);
 
-            // CALCULO DE POSICION Y -- SOBRE EL BARCO
+            // Mantener la altura relativa al barco
             Vector3 position = transform.position;
-            position.y = startingPosY + boat.transform.localPosition.y; // Mantiene la Y en relación al barco
+            position.y = startingPosY + boat.transform.localPosition.y;
 
-            // LEEMOS ENTRADA WASD
+            // Capturar movimiento WASD
             float xMov = Input.GetAxisRaw("Horizontal");
             float zMov = Input.GetAxisRaw("Vertical");
 
-            Vector3 forward = transform.forward;
-            Vector3 right = transform.right;
+            // Calcular dirección de movimiento normalizada
+            Vector3 moveDirection = (transform.right * xMov + transform.forward * zMov).normalized;
+            Vector3 targetPosition = position + moveDirection * boatSpeed_ * Time.deltaTime;
 
-            forward.Normalize();
-            right.Normalize();
-
-            Vector3 move = (right * xMov + forward * zMov).normalized * boatSpeed_ * Time.deltaTime;
-
-            // APLICAMOS MOVIMIENTO EN X/Z Y MANTENEMOS Y
-            position += new Vector3(move.x, 0, move.z); // Solo afecta X y Z
-            transform.position = position;
+            // Aplicar movimiento con MoveTowards para mayor responsividad
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * movementSpeed);
         }
+
 
         else if (PlayerTrigger.playerPosition.Equals(PlayerPosition.SEA))
         {
+            // Capturar entrada del mouse para rotación
+            float mouseX = Input.GetAxis("Mouse X") * sensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
 
+            // Aplicar rotación con límites en X (para evitar voltear completamente)
+            rotationX = Mathf.Clamp(rotationX - mouseY, -90f, 90f);
+            rotationY += mouseX;
+
+            // Suavizar la rotación
+            Quaternion targetRotation = Quaternion.Euler(rotationX, rotationY, 0f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothness);
+
+            // Capturar movimiento con "W" (avanzar en la dirección que miramos)
+            float moveInput = Input.GetAxisRaw("Vertical"); // W/S
+
+            // Dirección de avance basada en la rotación de la cámara
+            Vector3 moveDirection = transform.forward * moveInput;
+
+            // Aplicar fuerza de gravedad marina
+            float depthFactor = Mathf.Clamp(Vector3.Dot(transform.forward, Vector3.down), -1f, 1f);
+            float gravityEffect = Mathf.Lerp(sinkSpeed, riseSpeed, (depthFactor + 1) / 2); // Más rápido hacia abajo, más lento hacia arriba
+
+            Vector3 gravityForce = Vector3.down * gravityEffect * Time.deltaTime;
+
+            // Aplicar movimiento suavizado
+            Vector3 targetPosition = transform.position + (moveDirection * seaSpeed * Time.deltaTime) + gravityForce;
+            transform.position = Vector3.Lerp(transform.position, targetPosition, movementSmoothness * Time.deltaTime);
         }
 
         // UI OPENED
@@ -111,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (this.inventory.selectObject(PlayerTrigger.objectTriggered))
                 {
-                    PlayerTrigger.objectTriggered = null;
+                    PlayerTrigger.resetTriggerObject();
                 }
             }
         }

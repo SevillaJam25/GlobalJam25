@@ -37,7 +37,6 @@ public class PlayerTrigger : MonoBehaviour
         }
         if (other.tag == "Ladder")
         {
-            Debug.Log("HEY");
             ladderTriggered = true;
             string stylizedStr = $"<color=#cfba00>Subir hacia el barco</color>";
             onTriggerEnterWithElement.Invoke(stylizedStr);
@@ -68,5 +67,11 @@ public class PlayerTrigger : MonoBehaviour
             objectTriggered = null;
             onTriggerExitWithElement.Invoke();
         }
+    }
+
+    public static void resetTriggerObject()
+    {
+        objectTriggered = null;
+        onTriggerExitWithElement.Invoke();
     }
 }

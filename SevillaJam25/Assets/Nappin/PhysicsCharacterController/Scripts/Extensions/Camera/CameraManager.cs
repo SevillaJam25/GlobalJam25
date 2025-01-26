@@ -53,7 +53,6 @@ namespace PhysicsCharacterController
             activeThirdPerson = false;
             if (activeThirdPerson)
             {
-                Debug.Log("3 PERSONA");
                 characterManager.SetLockToCamera(false);
 
                 firstPersonCamera.gameObject.SetActive(false);
@@ -65,7 +64,6 @@ namespace PhysicsCharacterController
             }
             else
             {
-                Debug.Log("1 PERSONA");
                 characterManager.SetLockToCamera(true);
 
                 firstPersonCamera.gameObject.SetActive(true);
