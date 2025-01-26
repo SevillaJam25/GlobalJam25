@@ -6,11 +6,13 @@
 				<StateGroup Name="States" ID="{4EC0B4CB-FE63-4E24-8E80-DBF1FCBC21B4}">
 					<ChildrenList>
 						<State Name="None" ID="{A1988F57-6A79-413C-A671-354800E8E21C}"/>
-						<State Name="Depths_High" ID="{C0971CFC-CAC8-450A-B3E6-58404BBDCD84}"/>
-						<State Name="Surface" ID="{042E865D-C32B-41D0-86CE-0BEB2DEB9551}"/>
-						<State Name="Depths_Mid" ID="{F30C373D-7DF8-4BB9-A049-2DB2FF7C1D5B}"/>
-						<State Name="Depths_Low" ID="{022E4662-8A22-4029-A752-B33C3589BE09}"/>
-						<State Name="Main_Menu" ID="{F4FF80F7-33D3-4C9F-A2AC-C4446590ECDB}"/>
+						<State Name="_02_Depths_High" ID="{C0971CFC-CAC8-450A-B3E6-58404BBDCD84}"/>
+						<State Name="_01_Surface" ID="{042E865D-C32B-41D0-86CE-0BEB2DEB9551}"/>
+						<State Name="_03_Depths_Mid" ID="{F30C373D-7DF8-4BB9-A049-2DB2FF7C1D5B}"/>
+						<State Name="_04_Depths_Low" ID="{022E4662-8A22-4029-A752-B33C3589BE09}"/>
+						<State Name="_00_Main_Menu" ID="{F4FF80F7-33D3-4C9F-A2AC-C4446590ECDB}"/>
+						<State Name="_06_Credits" ID="{FD74650A-0606-4F07-9C82-D6FCD13063BB}"/>
+						<State Name="_05_Victory" ID="{CB36A593-BD45-4495-8954-E8F18761983B}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

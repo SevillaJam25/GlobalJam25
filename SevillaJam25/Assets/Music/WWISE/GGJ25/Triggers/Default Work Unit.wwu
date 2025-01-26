@@ -21,18 +21,6 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 						</Trigger>
-						<Trigger Name="Submerge" ID="{626D431D-FF8E-4A4D-9CDE-23BF2159366E}">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="26"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-						</Trigger>
-						<Trigger Name="Emerge" ID="{8F76FAFA-31DE-4C0A-9BEE-68825A77B8C2}">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="26"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-						</Trigger>
 						<Trigger Name="Calyx" ID="{C3AC5CE6-2E1F-4BAB-AA97-4DD3F7BE4896}"/>
 						<Trigger Name="Dynamo" ID="{E951F759-877A-4705-A222-D68E33A974F0}"/>
 						<Trigger Name="Iron_Hit" ID="{E011DB61-1C96-4720-8FD6-DE115798E5A1}"/>
