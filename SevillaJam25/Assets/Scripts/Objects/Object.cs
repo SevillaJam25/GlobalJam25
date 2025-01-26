@@ -5,7 +5,11 @@ public class Object : MonoBehaviour
     private Vector3 initialPos;
     private Transform initialParent;
     public string objectName;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] public ObjectsTypes type;
+
+    public delegate void OnObjectUse(ObjectsTypes obj);
+    public static event OnObjectUse onObjectUse;
+
     void Awake()
     {
         initialParent = transform.parent;
@@ -26,9 +30,8 @@ public class Object : MonoBehaviour
         transform.SetParent(newParent);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void action()
     {
-
+        onObjectUse.Invoke(type);
     }
 }

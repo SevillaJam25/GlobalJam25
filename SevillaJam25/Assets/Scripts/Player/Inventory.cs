@@ -10,8 +10,10 @@ public class Inventory : MonoBehaviour
     [SerializeField] public int inventorySize = 3;
     [SerializeField] public List<Text> texts;
 
+    private ObjectUseManager objectUseManager;
     public void Awake()
     {
+        this.objectUseManager = GetComponent<ObjectUseManager>();
         this.objectsInventory = new List<Object> { null, null, null };
     }
     private int? getFirstEmptyIndex()
@@ -26,7 +28,7 @@ public class Inventory : MonoBehaviour
         return null;  // Si no se encuentra ningún índice vacío
     }
 
-    private void addObject(Object obj)
+    private bool addObject(Object obj)
     {
         var firstIndex = getFirstEmptyIndex();
 
@@ -34,21 +36,25 @@ public class Inventory : MonoBehaviour
         {
             objectsInventory[firstIndex.Value] = obj;
             obj.takeObject(transform);
-            texts[firstIndex.Value].text = obj.name;
+            texts[firstIndex.Value].text = obj.objectName;
+            setIndex(firstIndex.Value);
+            return true;
         }
         else
         {
             Debug.Log("No hay espacio en inventario");
+            return false;
         }
     }
 
     private void setIndex(int index)
     {
+        objectUseManager.changedHand();
         selectedObject = objectsInventory[inventoryIndex];
         string noStylizedStr = $"Empty";
         if (selectedObject)
         {
-            noStylizedStr = $"{selectedObject.name}";
+            noStylizedStr = $"{selectedObject.objectName}";
         }
         this.texts[inventoryIndex].text = noStylizedStr;
 
@@ -57,7 +63,7 @@ public class Inventory : MonoBehaviour
         string stylizedStr = $"<color=#cfba00>Empty</color>";
         if (selectedObject)
         {
-            stylizedStr = $"<color=#cfba00>{selectedObject.name}</color>";
+            stylizedStr = $"<color=#cfba00>{selectedObject.objectName}</color>";
         }
 
         this.texts[inventoryIndex].text = stylizedStr;
@@ -76,15 +82,22 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void selectObject(Object obj)
+    public bool selectObject(Object obj)
     {
-        addObject(obj);
+        return addObject(obj);
     }
 
     public void dropItem()
     {
+        if (!this.objectsInventory[inventoryIndex]) return;
         this.texts[inventoryIndex].text = "Empty";
         this.objectsInventory[inventoryIndex] = null;
         selectedObject.drop();
+    }
+
+    public void useObject()
+    {
+        if (!this.objectsInventory[inventoryIndex]) return;
+        this.objectsInventory[inventoryIndex].action();
     }
 }

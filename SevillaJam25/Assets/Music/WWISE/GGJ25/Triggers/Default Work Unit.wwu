@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AA6922D6-7CAD-4B19-BB87-52B40FEEBF65}" SchemaVersion="123">
+	<Triggers>
+		<WorkUnit Name="Default Work Unit" ID="{AA6922D6-7CAD-4B19-BB87-52B40FEEBF65}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="STINGERS" ID="{178C9880-B2DF-45AB-9A6D-4176CA6F6C4B}" ShortID="983676540">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="26"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Trigger Name="Crucifix" ID="{0F5FB86D-15C5-4087-B9FE-0012E7AE4AE0}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="26"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Trigger>
+						<Trigger Name="Bubbles" ID="{35C37392-7DBC-4426-9BB7-231F0140A1C7}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="26"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Trigger>
+						<Trigger Name="Submerge" ID="{626D431D-FF8E-4A4D-9CDE-23BF2159366E}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="26"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Trigger>
+						<Trigger Name="Emerge" ID="{8F76FAFA-31DE-4C0A-9BEE-68825A77B8C2}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="26"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Trigger>
+						<Trigger Name="Calyx" ID="{C3AC5CE6-2E1F-4BAB-AA97-4DD3F7BE4896}"/>
+						<Trigger Name="Dynamo" ID="{E951F759-877A-4705-A222-D68E33A974F0}"/>
+						<Trigger Name="Iron_Hit" ID="{E011DB61-1C96-4720-8FD6-DE115798E5A1}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="BREATH" ID="{5189FC8F-09F8-4F08-81FB-FD65E381DD3A}" ShortID="30976124">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="24"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Trigger Name="Breath_In_Slow" ID="{2EF48DA8-421D-4825-BD4F-7CBE90209F86}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Trigger>
+						<Trigger Name="Breath_In_Medium" ID="{1DD9C3DD-1147-4D4E-BCC0-BF0B8BF5813C}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Trigger>
+						<Trigger Name="Breath_In_Fast" ID="{1DC16507-B7F3-4B9C-9306-235354AC319C}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Trigger>
+						<Trigger Name="Breath_Out_Slow" ID="{555BEE63-5068-4617-B1F0-EBAD17C41F4F}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Trigger>
+						<Trigger Name="Breath_Out_Medium" ID="{28CD858C-2C48-4C05-97DA-8D6C5A12A4F2}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Trigger>
+						<Trigger Name="Breath_Out_Fast" ID="{D462C932-AD40-4352-BA91-A4F2C4467840}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Trigger>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Triggers>
+</WwiseDocument>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0A381C08-3314-401E-97CE-6A0BB40C7708}" SchemaVersion="123">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{0A381C08-3314-401E-97CE-6A0BB40C7708}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Detector" ID="{08E271DD-5BD8-4B32-913E-E5B61618B41F}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="3"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Det_01" ID="{C579A832-162A-4C5F-A77B-2E3F46C799FC}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="3"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Switch>
+						<Switch Name="Det_02" ID="{622BC5F3-19DE-4D4A-BE00-099E9CE612FD}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="3"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Switch>
+						<Switch Name="Det_03" ID="{591ACE1C-D4DF-4B12-B3DA-CB6EA8671884}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="3"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Switch>
+						<Switch Name="Det_04" ID="{7F1530BC-5DBD-4EAE-88A7-F60FA6AEC9D0}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="3"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Switch>
+						<Switch Name="Det_05" ID="{18469823-B3E8-405E-B82D-0AA52E5A7992}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="3"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Switch>
+						<Switch Name="Det_OFF" ID="{E5FE0C27-1391-4188-918C-C4971EF51619}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>
