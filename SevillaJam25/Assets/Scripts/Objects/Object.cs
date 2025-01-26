@@ -3,6 +3,7 @@ using UnityEngine;
 public class Object : MonoBehaviour
 {
     private Vector3 initialPos;
+    private Quaternion initialRotation;
     private Transform initialParent;
     public string objectName;
     [SerializeField] public ObjectsTypes type;
@@ -14,12 +15,14 @@ public class Object : MonoBehaviour
     {
         initialParent = transform.parent;
         initialPos = transform.position;
+        initialRotation = transform.rotation;
     }
 
     public void drop()
     {
         gameObject.tag = "Object";
         transform.position = initialPos;
+        transform.rotation = initialRotation;
         transform.SetParent(initialParent);
     }
 
