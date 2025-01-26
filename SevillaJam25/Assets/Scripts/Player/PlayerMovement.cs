@@ -2,61 +2,148 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private CameraController cameraController;
-    private CharacterController controller_; //Moves game object in given direction
-    private Vector3 playerVelocity_;
-    private bool isGrounded_;
+    private CharacterController controller_;
     public Transform boatSpot;
-    [SerializeField] private float speed_ = 2.0f;
-    [SerializeField] private float gravity_ = -9.81f;
+    public Transform seaSpot;
+
+    [SerializeField] private float boatSpeed_ = 2.95f;
+    [SerializeField] private float gravity_ = 8.5f; // Aumentar gravedad para caída rápida
+    private float verticalVelocity = 0f; // Control de velocidad en el eje Y
     private Inventory inventory;
+    [SerializeField] public GameObject boat;
+    private float rotationX = 0f;
+    private float rotationY = 0f;
+    public float Sensitivity
+    {
+        get { return sensitivity; }
+        set { sensitivity = value; }
+    }
+    private float startingPosY;
+    public float rotationSmoothness = 10.2f;  // Cuanto más alto, más rápida la rotación
+    public float movementSpeed = 3.95f;        // Velocidad de movimiento
+
+    public float seaSpeed = 5f;         // Velocidad base en el agua
+    public float sinkSpeed = 4f;        // Velocidad de caída en el agua
+    public float riseSpeed = 2f;        // Velocidad al subir en el agua (más lento que bajar)
+    public float movementSmoothness = 10f;
+
+    [Range(0f, 20f)][SerializeField] float sensitivity = 2f;
+    [Tooltip("Limits vertical camera rotation. Prevents the flipping that happens when rotation goes above 90.")]
 
     void Start()
     {
-        cameraController = GetComponent<CameraController>();
+        startingPosY = transform.position.y;
         inventory = GetComponent<Inventory>();
         controller_ = gameObject.AddComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
     }
+
     void Update()
     {
-        // Usamos GetAxisRaw para obtener una respuesta instantánea
-        float xMov = Input.GetAxisRaw("Horizontal");
-        float yMov = Input.GetAxisRaw("Vertical");
+        if (PlayerTrigger.playerPosition.Equals(PlayerPosition.BOAT))
+        {
+            // Capturar entrada del mouse sin multiplicar por deltaTime
+            float mouseX = Input.GetAxis("Mouse X") * sensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
 
-        // Obtener la dirección de la cámara
-        Vector3 forward = Camera.main.transform.forward;
-        Vector3 right = Camera.main.transform.right;
+            // Aplicar límites a la rotación en X (mirada vertical)
+            rotationX = Mathf.Clamp(rotationX - mouseY, -90f, 90f);
+            rotationY += mouseX;
 
-        // Asegurarse de que el movimiento sea horizontal y no afecte al eje Y
-        forward.y = 0f;
-        right.y = 0f;
+            // Suavizar la rotación con Slerp, aumentando la velocidad
+            Quaternion targetRotation = Quaternion.Euler(rotationX, rotationY, 0f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothness);
 
-        // Normalizar las direcciones para evitar movimientos más rápidos en diagonales
-        forward.Normalize();
-        right.Normalize();
+            // Mantener la altura relativa al barco
+            Vector3 position = transform.position;
+            position.y = startingPosY + boat.transform.localPosition.y;
 
-        // Calcular el movimiento en base a la orientación de la cámara
-        Vector3 move = (right * xMov + forward * yMov).normalized;
+            // Capturar movimiento WASD
+            float xMov = Input.GetAxisRaw("Horizontal");
+            float zMov = Input.GetAxisRaw("Vertical");
 
-        // Mover al personaje
-        controller_.Move(move * Time.deltaTime * speed_);
+            // Calcular dirección de movimiento normalizada
+            Vector3 moveDirection = (transform.right * xMov + transform.forward * zMov).normalized;
+            Vector3 targetPosition = position + moveDirection * boatSpeed_ * Time.deltaTime;
+
+            // Aplicar movimiento con MoveTowards para mayor responsividad
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * movementSpeed);
+        }
+
+
+        else if (PlayerTrigger.playerPosition.Equals(PlayerPosition.SEA))
+        {
+            // Capturar entrada del mouse para rotación
+            float mouseX = Input.GetAxis("Mouse X") * sensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
+
+            // Aplicar rotación con límites en X (para evitar voltear completamente)
+            rotationX = Mathf.Clamp(rotationX - mouseY, -90f, 90f);
+            rotationY += mouseX;
+
+            // Suavizar la rotación
+            Quaternion targetRotation = Quaternion.Euler(rotationX, rotationY, 0f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothness);
+
+            // Capturar movimiento con "W" (avanzar en la dirección que miramos)
+            float moveInput = Input.GetAxisRaw("Vertical"); // W/S
+
+            // Dirección de avance basada en la rotación de la cámara
+            Vector3 moveDirection = transform.forward * moveInput;
+
+            // Aplicar fuerza de gravedad marina
+            float depthFactor = Mathf.Clamp(Vector3.Dot(transform.forward, Vector3.down), -1f, 1f);
+            float gravityEffect = Mathf.Lerp(sinkSpeed, riseSpeed, (depthFactor + 1) / 2); // Más rápido hacia abajo, más lento hacia arriba
+
+            Vector3 gravityForce = Vector3.down * gravityEffect * Time.deltaTime;
+
+            // Aplicar movimiento suavizado
+            Vector3 targetPosition = transform.position + (moveDirection * seaSpeed * Time.deltaTime) + gravityForce;
+            transform.position = Vector3.Lerp(transform.position, targetPosition, movementSmoothness * Time.deltaTime);
+        }
+
+        // UI OPENED
+
+        // Vector3 forward = transform.forward;
+        // Vector3 right = transform.right;
+
+        // forward.Normalize();
+        // right.Normalize();
+
+        // Vector3 move = (right * xMov + forward * yMov).normalized * boatSpeed_;
+        // controller_.Move(move * Time.deltaTime);
         HandleInput();
     }
 
     private void HandleInput()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (PlayerTrigger.ladderTriggered)
             {
-                transform.SetPositionAndRotation(boatSpot.position, transform.rotation);
+                if (PlayerTrigger.playerPosition == PlayerPosition.SEA)
+                {
+
+                    transform.SetPositionAndRotation(boatSpot.position, transform.rotation);
+                }
+                else
+                {
+                    transform.SetPositionAndRotation(seaSpot.position, transform.rotation);
+                }
             }
 
             if (PlayerTrigger.objectTriggered)
             {
                 if (this.inventory.selectObject(PlayerTrigger.objectTriggered))
                 {
-                    PlayerTrigger.objectTriggered = null;
+                    PlayerTrigger.resetTriggerObject();
                 }
             }
         }
@@ -66,33 +153,18 @@ public class PlayerMovement : MonoBehaviour
             this.inventory.dropItem();
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             this.inventory.changeInventoryIndex(true);
         }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             this.inventory.changeInventoryIndex(false);
         }
 
-
-        if (Input.GetMouseButtonDown(0)) // 0 es el botón izquierdo
+        if (Input.GetMouseButtonDown(0))
         {
-            // Debug.Log("Clic izquierdo presionado");
             this.inventory.useObject();
         }
-
-        if (Input.GetMouseButton(0)) // Manteniendo presionado
-        {
-            // Debug.Log("Clic izquierdo mantenido");
-        }
-
-        if (Input.GetMouseButtonUp(0)) // Cuando se suelta
-        {
-            // Debug.Log("Clic izquierdo soltado");
-        }
-
-
     }
-
 }
