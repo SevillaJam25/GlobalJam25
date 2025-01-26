@@ -11,7 +11,7 @@ public class Floater : MonoBehaviour
 
     private void Start()
     {
-     
+        
     }
     private void FixedUpdate()
     {
@@ -30,8 +30,6 @@ public class Floater : MonoBehaviour
 
             rb_.AddForce(displacementMultiplier * -rb_.linearVelocity * waterDrag * Time.deltaTime, ForceMode.VelocityChange); 
             rb_.AddTorque(displacementMultiplier * -rb_.angularVelocity * waterAngularDrag * Time.deltaTime, ForceMode.VelocityChange); 
-            
         }
-
     }
 }

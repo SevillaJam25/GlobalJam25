@@ -53,6 +53,7 @@
 														<Property Name="DestinationContextType" Type="int16" Value="2"/>
 														<Property Name="EnableTransitionFadeIn" Type="bool" Value="True"/>
 														<Property Name="EnableTransitionFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 														<Property Name="SourceContextType" Type="int16" Value="2"/>
 														<Property Name="UseTransitionObject" Type="bool" Value="True"/>
 													</PropertyList>
@@ -92,6 +93,7 @@
 														<Property Name="DestinationContextType" Type="int16" Value="2"/>
 														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 														<Property Name="SourceContextType" Type="int16" Value="2"/>
 													</PropertyList>
 													<ReferenceList>
@@ -129,6 +131,7 @@
 														<Property Name="DestinationContextType" Type="int16" Value="2"/>
 														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 														<Property Name="SourceContextType" Type="int16" Value="2"/>
 													</PropertyList>
 													<ReferenceList>

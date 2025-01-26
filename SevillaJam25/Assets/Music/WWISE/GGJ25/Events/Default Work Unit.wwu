@@ -17,13 +17,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{701E80B9-C7B8-40B5-93C2-209AE3EEC663}" ShortID="40804303">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Surface" ID="{23812391-96D3-4D38-8D0A-0C444585D611}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="_04_Depths_Low" ID="{AD7112CB-CAD0-4972-8074-6A685C6F2540}">
@@ -77,13 +70,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="_02_Depths_High" ID="{C0971CFC-CAC8-450A-B3E6-58404BBDCD84}" WorkUnitID="{F0FAA444-4399-40EB-AD00-D8FF9DA0CDAB}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{16FAC0C0-7002-4622-BBEE-FF3B8395B2CF}" ShortID="877834328">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Depths_high" ID="{16E4A4C5-0AD4-4E2D-B00A-6B3511162DB0}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

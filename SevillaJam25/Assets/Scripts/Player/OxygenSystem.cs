@@ -31,6 +31,11 @@ public class OxygenSystem : MonoBehaviour
     public Text uiOxygenLeft;
 
     private bool isBreating = false;
+    public delegate void OnInhale();
+    public static event OnInhale onInhale;
+     public delegate void OnExhale();
+    public static event OnExhale onExhale;
+
 
     private void OnEnable()
     {
@@ -43,7 +48,8 @@ public class OxygenSystem : MonoBehaviour
 
     private void StartSubmersion()
     {
-        if(!isBreating) {
+        if (!isBreating)
+        {
             StartCoroutine("Breath");
         }
     }
@@ -56,13 +62,14 @@ public class OxygenSystem : MonoBehaviour
         StopCoroutine("Breath");
     }
 
-    private void changeState(BreahStates newState) 
+    private void changeState(BreahStates newState)
     {
         breathState = newState;
         uiBreathState.text = newState.ToString();
     }
 
-    private void updateOxygen(float oxygen) {
+    private void updateOxygen(float oxygen)
+    {
         OxygenLeft = oxygen;
         uiOxygenLeft.text = oxygen.ToString();
     }
@@ -70,14 +77,16 @@ public class OxygenSystem : MonoBehaviour
     private IEnumerator Breath()
     {
         isBreating = true;
-        while (PlayerTrigger.playerPosition!=PlayerPosition.BOAT)
+        while (PlayerTrigger.playerPosition != PlayerPosition.BOAT)
         {
             // INHALATION
             changeState(BreahStates.INHALING);
+            onInhale.Invoke();
             yield return new WaitForSeconds(TimePerBreathPeriod);
 
             // EXHALATION
             changeState(BreahStates.EXHALATING);
+            onExhale.Invoke();
             updateOxygen(OxygenLeft - OxygenLoss);
             yield return new WaitForSeconds(TimePerBreathPeriod);
 
