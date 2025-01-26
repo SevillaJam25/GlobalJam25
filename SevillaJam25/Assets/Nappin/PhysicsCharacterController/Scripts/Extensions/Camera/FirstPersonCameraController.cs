@@ -35,10 +35,10 @@ namespace PhysicsCharacterController
         private void Update()
         {
             //DISABLE if using old input system
-            //input += movementActions.Gameplay.Camera.ReadValue<Vector2>() * mouseSensivity * new Vector2(0.01f, 0.001f);
+            input += movementActions.Gameplay.Camera.ReadValue<Vector2>() * mouseSensivity * new Vector2(0.01f, 0.001f);
 
             //ENABLE if using old input system
-            input = Input.mousePosition * mouseSensivity * new Vector2(0.01f, 0.001f);
+            //input = Input.mousePosition * mouseSensivity * new Vector2(0.01f, 0.001f);
 
             if (input.y > cinemachinePOV.m_VerticalAxis.m_MaxValue) input.y = cinemachinePOV.m_VerticalAxis.m_MaxValue;
             else if (input.y < cinemachinePOV.m_VerticalAxis.m_MinValue) input.y = cinemachinePOV.m_VerticalAxis.m_MinValue;
@@ -62,17 +62,17 @@ namespace PhysicsCharacterController
         #region Enable / Disable
 
         //DISABLE if using old input system
-        //private void OnEnable()
-        //{
-        //    movementActions.Enable();
-        //}
+        private void OnEnable()
+        {
+            movementActions.Enable();
+        }
 
 
         //DISABLE if using old input system
-        //private void OnDisable()
-        //{
-        //    movementActions.Disable();
-        //}
+        private void OnDisable()
+        {
+            movementActions.Disable();
+        }
 
         #endregion
 
