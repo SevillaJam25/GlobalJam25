@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         {
             RenderSettings.fog = true;
             RenderSettings.fogColor = new Color(0.1f, 0.4f, 0.6f, 1f); // Azul verdoso para simular el agua
-            RenderSettings.fogDensity = 0.01f; // Ajusta para mayor o menor visibilidad
+            RenderSettings.fogDensity = 0.005f; // Ajusta para mayor o menor visibilidad
 
             // Dirección de movimiento basada en la orientación de la cámara
             Vector3 moveDirection = transform.TransformDirection(new Vector3(moveHorizontal, 0, moveVertical)).normalized;
@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
             float ascendBonus = 1f;
             if (moveVertical > 0 && Vector3.Dot(transform.forward, Vector3.up) > 0.3f)
             {
-                ascendBonus = 2.5f; // Aumentar velocidad al ascender
+                ascendBonus = 1.5f; // Aumentar velocidad al ascender
             }
 
             // Velocidad del movimiento
@@ -100,10 +100,10 @@ public class PlayerMovement : MonoBehaviour
             float gravityEffect = Mathf.Lerp(sinkSpeed, riseSpeed, (depthFactor + 1) / 2);
 
             // Reducimos el efecto de la gravedad si el jugador está subiendo
-            if (moveVertical > 0)
-            {
-                gravityEffect *= 1.2f; // La gravedad tiene menos efecto si subimos
-            }
+            // if (moveVertical > 0)
+            // {
+            //     gravityEffect *= 0.6f; // La gravedad tiene menos efecto si subimos
+            // }
 
             Vector3 gravityForce = Vector3.down * gravityEffect * Time.deltaTime;
 
