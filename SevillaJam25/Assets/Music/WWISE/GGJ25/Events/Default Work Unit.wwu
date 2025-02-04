@@ -34,7 +34,7 @@
 								<Action Name="" ID="{3C38172A-22A6-48E8-BCF2-10D9D2304A9D}" ShortID="208758814">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Depths_low" ID="{DB26AF92-A7EF-4A7B-80A1-6C40B79FB946}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
+											<ObjectRef Name="04_Depths_low" ID="{DB26AF92-A7EF-4A7B-80A1-6C40B79FB946}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -49,13 +49,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="_03_Depths_Mid" ID="{F30C373D-7DF8-4BB9-A049-2DB2FF7C1D5B}" WorkUnitID="{F0FAA444-4399-40EB-AD00-D8FF9DA0CDAB}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{94723162-EBC1-45B5-B962-2F52F75129FF}" ShortID="828269521">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Depths_mid" ID="{B2E136D2-72EF-433E-B8DE-53F7D1E6E4A9}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -90,7 +83,7 @@
 								<Action Name="" ID="{BBC5BCA1-27D2-45FC-B1F0-2F667C9707B8}" ShortID="615426087">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Main_Menu" ID="{F5F6E4E9-4649-4462-A8AE-4105032F559F}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
+											<ObjectRef Name="00_Main_Menu" ID="{F5F6E4E9-4649-4462-A8AE-4105032F559F}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -108,13 +101,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{8AFD8985-2156-4748-8788-8EEC8A9B92E9}" ShortID="25706458">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Credits" ID="{61A3243E-6C91-4590-AD69-ACD24A71F20D}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="_05_Victory" ID="{11C2E59D-1D8D-4DE5-9041-C7B073D63319}">
@@ -126,13 +112,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="_05_Victory" ID="{CB36A593-BD45-4495-8954-E8F18761983B}" WorkUnitID="{F0FAA444-4399-40EB-AD00-D8FF9DA0CDAB}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{7287D432-9127-4EE2-AA22-B9765450C438}" ShortID="768327342">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Victory" ID="{90EEEF47-E2E3-4057-A9F6-B508EF6A71FD}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

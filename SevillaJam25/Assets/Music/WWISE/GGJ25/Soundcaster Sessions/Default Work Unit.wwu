@@ -6,10 +6,10 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{9D385B17-6DC3-484A-AC13-D7ECE0D4EA87}">
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="_00_Main_Menu" ID="{F4FF80F7-33D3-4C9F-A2AC-C4446590ECDB}"/>
+						<CurrentStateRef Name="_03_Depths_Mid" ID="{F30C373D-7DF8-4BB9-A049-2DB2FF7C1D5B}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Det_01" ID="{C579A832-162A-4C5F-A77B-2E3F46C799FC}"/>
+						<CurrentSwitchRef Name="Det_OFF" ID="{E5FE0C27-1391-4188-918C-C4971EF51619}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
