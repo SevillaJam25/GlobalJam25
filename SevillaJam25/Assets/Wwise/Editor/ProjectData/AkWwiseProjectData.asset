@@ -331,11 +331,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c043cfff23894b44becfcee61a6f18c3
     GuidInternal: 
-    m_lastTime: -8584637102683807796
+    m_lastTime: -8584629779716896666
     List:
-    - name: SoundBank
-      guid: 2f21fdc94331334e83a4a37e6b7f90e1
-      id: 1661994096
+    - name: GGJ25
+      guid: 20ca3375dcf915418f0c88b8fe995349
+      id: 2182974736
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -343,10 +343,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: c043cfff23894b44becfcee61a6f18c3
-      - ElementName: SoundBank
+      - ElementName: GGJ25
         ObjectType: 7
-        guid: 2f21fdc94331334e83a4a37e6b7f90e1
-      Path: SoundBanks\Default Work Unit\SoundBank
+        guid: 20ca3375dcf915418f0c88b8fe995349
+      Path: SoundBanks\Default Work Unit\GGJ25
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -359,7 +359,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f9e5db41c38e524b880460ff34d94096
     GuidInternal: 
-    m_lastTime: -8584637102683947790
+    m_lastTime: -8584629786991991037
     List:
     - name: _00_Main_Menu
       guid: bc4649cd84357848a6cf45aa481c3f0a
@@ -379,8 +379,8 @@ MonoBehaviour:
         guid: bc4649cd84357848a6cf45aa481c3f0a
       Path: Events\Default Work Unit\STATES\_00_Main_Menu
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: _01_Surface
       guid: a4c822cea9182f48aaf5872f85dd92d2
       id: 534975845
@@ -399,8 +399,8 @@ MonoBehaviour:
         guid: a4c822cea9182f48aaf5872f85dd92d2
       Path: Events\Default Work Unit\STATES\_01_Surface
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: _02_Depths_High
       guid: 46c267e7919b724fad7958258846869d
       id: 3550923338
@@ -419,8 +419,8 @@ MonoBehaviour:
         guid: 46c267e7919b724fad7958258846869d
       Path: Events\Default Work Unit\STATES\_02_Depths_High
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: _03_Depths_Mid
       guid: ded86547b2fbfa46beb7c0d5249fe92f
       id: 3494740919
@@ -439,8 +439,8 @@ MonoBehaviour:
         guid: ded86547b2fbfa46beb7c0d5249fe92f
       Path: Events\Default Work Unit\STATES\_03_Depths_Mid
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: _04_Depths_Low
       guid: cb1271add0ca724980746a685c6f2540
       id: 3607273134
@@ -459,8 +459,8 @@ MonoBehaviour:
         guid: cb1271add0ca724980746a685c6f2540
       Path: Events\Default Work Unit\STATES\_04_Depths_Low
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: _05_Victory
       guid: 9de5c2118d1de54d9041c7b073d63319
       id: 2835911714
@@ -479,8 +479,8 @@ MonoBehaviour:
         guid: 9de5c2118d1de54d9041c7b073d63319
       Path: Events\Default Work Unit\STATES\_05_Victory
       maxAttenuation: 0
-      maxDuration: 10
-      minDuration: 10
+      maxDuration: -1
+      minDuration: -1
     - name: _06_Credits
       guid: e0014d8e6983d047aaaedfbb6f2b909d
       id: 3717470741
@@ -499,8 +499,8 @@ MonoBehaviour:
         guid: e0014d8e6983d047aaaedfbb6f2b909d
       Path: Events\Default Work Unit\STATES\_06_Credits
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: BREATH
       guid: 19409728e409f24da94860e914e3e9a0
       id: 1326786195
@@ -536,8 +536,8 @@ MonoBehaviour:
         guid: 0bfecc40fd32de4895c7cb96c71a86c5
       Path: Events\Default Work Unit\BREATH\Breath_In_Fast
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Breath_In_Medium
       guid: ec5b878fa7eedc4e804c7f05fe619b81
       id: 3768147567
@@ -556,8 +556,8 @@ MonoBehaviour:
         guid: ec5b878fa7eedc4e804c7f05fe619b81
       Path: Events\Default Work Unit\BREATH\Breath_In_Medium
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Breath_In_Slow
       guid: 3edda1d0192f3346955f57e8e3f22b0b
       id: 289446981
@@ -576,8 +576,8 @@ MonoBehaviour:
         guid: 3edda1d0192f3346955f57e8e3f22b0b
       Path: Events\Default Work Unit\BREATH\Breath_In_Slow
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Breath_Out_Fast
       guid: 9afd8cda5000ce4c930808f944dc098b
       id: 2318812695
@@ -596,8 +596,8 @@ MonoBehaviour:
         guid: 9afd8cda5000ce4c930808f944dc098b
       Path: Events\Default Work Unit\BREATH\Breath_Out_Fast
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Breath_Out_Medium
       guid: 4e09c80da2df00408668ad0b64a0d396
       id: 3926837372
@@ -616,8 +616,8 @@ MonoBehaviour:
         guid: 4e09c80da2df00408668ad0b64a0d396
       Path: Events\Default Work Unit\BREATH\Breath_Out_Medium
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Breath_Out_Slow
       guid: 93da42ea883cb045ba04d77316037e43
       id: 884408238
@@ -636,8 +636,8 @@ MonoBehaviour:
         guid: 93da42ea883cb045ba04d77316037e43
       Path: Events\Default Work Unit\BREATH\Breath_Out_Slow
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Bubbles
       guid: 60122afd4f103044916dc657d2b4aa23
       id: 769541046
@@ -656,8 +656,8 @@ MonoBehaviour:
         guid: 60122afd4f103044916dc657d2b4aa23
       Path: Events\Default Work Unit\STINGERS\Bubbles
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Calyx
       guid: 88f02de69f353242884cc450ef3a9687
       id: 208944088
@@ -676,8 +676,8 @@ MonoBehaviour:
         guid: 88f02de69f353242884cc450ef3a9687
       Path: Events\Default Work Unit\STINGERS\Calyx
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Crucifix
       guid: efb3afd78903f54da128a49521b7e8ba
       id: 3602146812
@@ -696,8 +696,8 @@ MonoBehaviour:
         guid: efb3afd78903f54da128a49521b7e8ba
       Path: Events\Default Work Unit\STINGERS\Crucifix
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Det_01
       guid: b4ccaf860d125f42b6b9e1f20ed5d6b1
       id: 746340238
@@ -716,8 +716,8 @@ MonoBehaviour:
         guid: b4ccaf860d125f42b6b9e1f20ed5d6b1
       Path: Events\Default Work Unit\DETECTOR\Det_01
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Det_02
       guid: 3aa32be80b2ad445817ea63a4d7a2af4
       id: 746340237
@@ -736,8 +736,8 @@ MonoBehaviour:
         guid: 3aa32be80b2ad445817ea63a4d7a2af4
       Path: Events\Default Work Unit\DETECTOR\Det_02
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Det_03
       guid: da65a1b5fbc5da42bfe62b192d10ad0a
       id: 746340236
@@ -756,8 +756,8 @@ MonoBehaviour:
         guid: da65a1b5fbc5da42bfe62b192d10ad0a
       Path: Events\Default Work Unit\DETECTOR\Det_03
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Det_04
       guid: 56ae620d9de0b7489191fbb78e5dd6b8
       id: 746340235
@@ -776,8 +776,8 @@ MonoBehaviour:
         guid: 56ae620d9de0b7489191fbb78e5dd6b8
       Path: Events\Default Work Unit\DETECTOR\Det_04
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Det_05
       guid: 2fcfc17701e02044b8481fcebf163f39
       id: 746340234
@@ -796,8 +796,8 @@ MonoBehaviour:
         guid: 2fcfc17701e02044b8481fcebf163f39
       Path: Events\Default Work Unit\DETECTOR\Det_05
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Det_OFF
       guid: f84213068ff2094cafd91785147923f4
       id: 3211496542
@@ -816,8 +816,8 @@ MonoBehaviour:
         guid: f84213068ff2094cafd91785147923f4
       Path: Events\Default Work Unit\DETECTOR\Det_OFF
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: DETECTOR
       guid: f7cb3b87d52a314da9e7c146652c6a6d
       id: 198272423
@@ -853,8 +853,8 @@ MonoBehaviour:
         guid: 3aa13f72741e5e469f3e0d92b24b038d
       Path: Events\Default Work Unit\STINGERS\Dynamo
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Iron_Hit
       guid: f6f4e96baec4d349b55f461c5da236a7
       id: 4020135633
@@ -873,8 +873,8 @@ MonoBehaviour:
         guid: f6f4e96baec4d349b55f461c5da236a7
       Path: Events\Default Work Unit\STINGERS\Iron_Hit
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: STATES
       guid: 3c7f11ec5970314297b2a7a4c6021a3f
       id: 1208172739

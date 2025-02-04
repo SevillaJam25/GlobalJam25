@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{9D385B17-6DC3-484A-AC13-D7ECE0D4EA87}">
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="_03_Depths_Mid" ID="{F30C373D-7DF8-4BB9-A049-2DB2FF7C1D5B}"/>
+						<CurrentStateRef Name="_01_Surface" ID="{042E865D-C32B-41D0-86CE-0BEB2DEB9551}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Det_OFF" ID="{E5FE0C27-1391-4188-918C-C4971EF51619}"/>

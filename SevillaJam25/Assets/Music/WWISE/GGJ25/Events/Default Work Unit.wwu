@@ -83,7 +83,7 @@
 								<Action Name="" ID="{BBC5BCA1-27D2-45FC-B1F0-2F667C9707B8}" ShortID="615426087">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="00_Main_Menu" ID="{F5F6E4E9-4649-4462-A8AE-4105032F559F}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
+											<ObjectRef Name="States" ID="{F9A0F408-612C-45E9-80DA-6C6A837AFFCE}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -124,12 +124,9 @@
 						<Event Name="Breath_In_Slow" ID="{D0A1DD3E-2F19-4633-955F-57E8E3F22B0B}">
 							<ChildrenList>
 								<Action Name="" ID="{117151F7-7F24-4279-9B23-F1B685B692B8}" ShortID="876827661">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="35"/>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Breath_In_Slow" ID="{2EF48DA8-421D-4825-BD4F-7CBE90209F86}" WorkUnitID="{AA6922D6-7CAD-4B19-BB87-52B40FEEBF65}"/>
+											<ObjectRef Name="breath_in_slow" ID="{3029D8CD-6027-4A6F-AEF4-CB3448D46AF9}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -138,12 +135,9 @@
 						<Event Name="Breath_In_Medium" ID="{8F875BEC-EEA7-4EDC-804C-7F05FE619B81}">
 							<ChildrenList>
 								<Action Name="" ID="{B90C40A5-F84F-4715-9E4D-AD1FA9B36936}" ShortID="59958681">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="35"/>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Breath_In_Medium" ID="{1DD9C3DD-1147-4D4E-BCC0-BF0B8BF5813C}" WorkUnitID="{AA6922D6-7CAD-4B19-BB87-52B40FEEBF65}"/>
+											<ObjectRef Name="breath_in_medium" ID="{B346A0AA-6C98-47ED-A763-F9D762FC24D9}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -152,12 +146,9 @@
 						<Event Name="Breath_In_Fast" ID="{40CCFE0B-32FD-48DE-95C7-CB96C71A86C5}">
 							<ChildrenList>
 								<Action Name="" ID="{549AC17D-0058-4EF5-A1F6-F79427BBB055}" ShortID="652472880">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="35"/>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Breath_In_Fast" ID="{1DC16507-B7F3-4B9C-9306-235354AC319C}" WorkUnitID="{AA6922D6-7CAD-4B19-BB87-52B40FEEBF65}"/>
+											<ObjectRef Name="breath_in_fast" ID="{276FF18A-E48E-4844-8806-F1E60FEC4D4B}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -166,12 +157,9 @@
 						<Event Name="Breath_Out_Fast" ID="{DA8CFD9A-0050-4CCE-9308-08F944DC098B}">
 							<ChildrenList>
 								<Action Name="" ID="{2B206B8C-64BC-453A-993E-9CFC8F07D467}" ShortID="884455273">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="35"/>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Breath_Out_Fast" ID="{D462C932-AD40-4352-BA91-A4F2C4467840}" WorkUnitID="{AA6922D6-7CAD-4B19-BB87-52B40FEEBF65}"/>
+											<ObjectRef Name="breath_out_fast" ID="{0AB73926-84B6-4E88-BFDB-D92E34B4EE41}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -180,12 +168,9 @@
 						<Event Name="Breath_Out_Medium" ID="{0DC8094E-DFA2-4000-8668-AD0B64A0D396}">
 							<ChildrenList>
 								<Action Name="" ID="{6919F666-E115-4FD7-B968-CA497C0DA0B0}" ShortID="990832304">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="35"/>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Breath_Out_Medium" ID="{28CD858C-2C48-4C05-97DA-8D6C5A12A4F2}" WorkUnitID="{AA6922D6-7CAD-4B19-BB87-52B40FEEBF65}"/>
+											<ObjectRef Name="breath_out_medium" ID="{C528622C-007F-417A-9DA1-03C0EAA2A430}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -194,12 +179,9 @@
 						<Event Name="Breath_Out_Slow" ID="{EA42DA93-3C88-45B0-BA04-D77316037E43}">
 							<ChildrenList>
 								<Action Name="" ID="{1AA107C6-4EC2-4C86-8900-7379E2124459}" ShortID="677660617">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="35"/>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Breath_Out_Slow" ID="{555BEE63-5068-4617-B1F0-EBAD17C41F4F}" WorkUnitID="{AA6922D6-7CAD-4B19-BB87-52B40FEEBF65}"/>
+											<ObjectRef Name="breath_out_slow" ID="{DE94BC2D-8A4A-4A86-B547-47663C056BE7}" WorkUnitID="{C5DF97C4-800B-4F19-BAB9-5ECC47E13CE4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
