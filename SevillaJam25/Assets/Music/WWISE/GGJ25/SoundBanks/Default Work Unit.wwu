@@ -3,10 +3,9 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{FFCF43C0-8923-444B-BECF-CEE61A6F18C3}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="SoundBank" ID="{C9FD212F-3143-4E33-83A4-A37E6B7F90E1}">
+				<SoundBank Name="GGJ25" ID="{7533CA20-F9DC-4115-8F0C-88B8FE995349}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Interactive Music Hierarchy" ID="{49FED366-B530-42A8-993B-924873AAB707}" WorkUnitID="{49FED366-B530-42A8-993B-924873AAB707}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Events" ID="{A69BF0FC-D84A-487C-ABDD-56F71CB2A126}" WorkUnitID="{A69BF0FC-D84A-487C-ABDD-56F71CB2A126}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{41DBE5F9-8EC3-4B52-8804-60FF34D94096}" WorkUnitID="{41DBE5F9-8EC3-4B52-8804-60FF34D94096}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -1,0 +1,100 @@
+Event	ID	Name			Wwise Object Path	Notes
+	208944088	Calyx			\Default Work Unit\STINGERS\Calyx	
+	289446981	Breath_In_Slow			\Default Work Unit\BREATH\Breath_In_Slow	
+	534975845	_01_Surface			\Default Work Unit\STATES\_01_Surface	
+	746340234	Det_05			\Default Work Unit\DETECTOR\Det_05	
+	746340235	Det_04			\Default Work Unit\DETECTOR\Det_04	
+	746340236	Det_03			\Default Work Unit\DETECTOR\Det_03	
+	746340237	Det_02			\Default Work Unit\DETECTOR\Det_02	
+	746340238	Det_01			\Default Work Unit\DETECTOR\Det_01	
+	769541046	Bubbles			\Default Work Unit\STINGERS\Bubbles	
+	884408238	Breath_Out_Slow			\Default Work Unit\BREATH\Breath_Out_Slow	
+	2318812695	Breath_Out_Fast			\Default Work Unit\BREATH\Breath_Out_Fast	
+	2825766870	_00_Main_Menu			\Default Work Unit\STATES\_00_Main_Menu	
+	2835911714	_05_Victory			\Default Work Unit\STATES\_05_Victory	
+	3211496542	Det_OFF			\Default Work Unit\DETECTOR\Det_OFF	
+	3286790596	Breath_In_Fast			\Default Work Unit\BREATH\Breath_In_Fast	
+	3494740919	_03_Depths_Mid			\Default Work Unit\STATES\_03_Depths_Mid	
+	3550923338	_02_Depths_High			\Default Work Unit\STATES\_02_Depths_High	
+	3602146812	Crucifix			\Default Work Unit\STINGERS\Crucifix	
+	3607273134	_04_Depths_Low			\Default Work Unit\STATES\_04_Depths_Low	
+	3717470741	_06_Credits			\Default Work Unit\STATES\_06_Credits	
+	3768147567	Breath_In_Medium			\Default Work Unit\BREATH\Breath_In_Medium	
+	3926837372	Breath_Out_Medium			\Default Work Unit\BREATH\Breath_Out_Medium	
+	4020135633	Iron_Hit			\Default Work Unit\STINGERS\Iron_Hit	
+	4156400771	Dynamo			\Default Work Unit\STINGERS\Dynamo	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	198272423	Detector			\Default Work Unit\Detector	
+
+Switch	ID	Name	Switch Group			Notes
+	746340234	Det_05	Detector			
+	746340235	Det_04	Detector			
+	746340236	Det_03	Detector			
+	746340237	Det_02	Detector			
+	746340238	Det_01	Detector			
+	3211496542	Det_OFF	Detector			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1208172739	States			\Default Work Unit\States	
+
+State	ID	Name	State Group			Notes
+	534975845	_01_Surface	States			
+	748895195	None	States			
+	2825766870	_00_Main_Menu	States			
+	2835911714	_05_Victory	States			
+	3494740919	_03_Depths_Mid	States			
+	3550923338	_02_Depths_High	States			
+	3607273134	_04_Depths_Low	States			
+	3717470741	_06_Credits	States			
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	208944088	Calyx			\Default Work Unit\STINGERS\Calyx	
+	289446981	Breath_In_Slow			\Default Work Unit\BREATH\Breath_In_Slow	
+	769541046	Bubbles			\Default Work Unit\STINGERS\Bubbles	
+	884408238	Breath_Out_Slow			\Default Work Unit\BREATH\Breath_Out_Slow	
+	2318812695	Breath_Out_Fast			\Default Work Unit\BREATH\Breath_Out_Fast	
+	3286790596	Breath_In_Fast			\Default Work Unit\BREATH\Breath_In_Fast	
+	3602146812	Crucifix			\Default Work Unit\STINGERS\Crucifix	
+	3768147567	Breath_In_Medium			\Default Work Unit\BREATH\Breath_In_Medium	
+	3926837372	Breath_Out_Medium			\Default Work Unit\BREATH\Breath_Out_Medium	
+	4156400771	Dynamo			\Default Work Unit\STINGERS\Dynamo	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	2994963	breath_out_medium	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\7A\{7AE469A7-004A-DB12-0AEE-0583824C9D07}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_out_medium\breath_out_medium		264696
+	21728172	submerge	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\08\{088D7C70-7497-E845-7684-A55D1386A076}.wem		\Interactive Music Hierarchy\Default Work Unit\Transitions\Transitions\submerge\submerge		495600
+	22704952	emerge	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\DD\{DDBB3D63-245D-FCCF-A19E-92AF9D6834D7}.wem		\Interactive Music Hierarchy\Default Work Unit\Transitions\Transitions\emerge\emerge		374064
+	64875434	breath_in_medium	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\7E\{7E388252-3110-157F-C45C-F81BF17AB67A}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_in_medium\breath_in_medium		132396
+	100545280	detector-02	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\78\{782B379F-3255-02DF-306F-DA9023D91ED8}.wem		\Interactive Music Hierarchy\Default Work Unit\Detector\detector-02\detector-02		352896
+	144046571	breath_in_medium	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\87\{8738AC16-4CDC-AD17-F90F-A6A7F4E45AFD}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_in_medium\breath_in_medium		176496
+	174985725	credits	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\18\{181AD828-4D1C-05D4-B9A7-C070A2F7A89F}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\States\06_Credits\credits\credits		10907588
+	183878209	main_menu	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\0F\{0F70E80A-4750-35E2-CA5A-39622118AF92}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\States\00_Main_Menu\main_menu\main_menu		6350496
+	250212442	surface	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\E6\{E60F8B9E-451A-5523-1B4F-9ADD6BE97351}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\States\01_Surface\surface\surface		5203896
+	294370108	breath_out_slow	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\22\{22D230BB-1AF8-9B8A-BDEB-E0AEE5FB7843}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_out_slow\breath_out_slow		396996
+	318183822	crucifix	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\E5\{E55BB8E6-E7E0-E13E-E0F1-C415B0F5FFB8}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Stingers\crucifix\crucifix		1499496
+	355274036	depth_high	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\BC\{BC712838-F9C7-758C-F577-64A705841868}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\States\02_Depths_high\depths_high\depth_high		11730696
+	360162971	breath_in_medium	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\54\{549B1571-0D1D-704B-9010-5E9906579B10}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_in_medium\breath_in_medium		132396
+	378180856	detector	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\1C\{1CF17FA4-915C-539D-2C32-B7945836B5D4}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\States\02_Depths_high\depths_high\detector		352896
+	417202405	breath_out_fast	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\5F\{5FDF84C0-19C0-E52B-239E-BBD8802900EE}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_out_fast\breath_out_fast		176496
+	446193543	breath_out_medium	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\EC\{EC509AA8-8ABA-8634-D5A2-E38336250CB3}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_out_medium\breath_out_medium		264696
+	458502676	detector	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\19\{1994FB4F-447C-BAB4-8D30-ED892320A093}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\States\03_Depths_mid\depths_mid\detector		352896
+	478445209	breath_out_slow	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\74\{746B63BF-8CEE-C2C6-5B48-B001F9AF1DDB}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_out_slow\breath_out_slow		396996
+	492330208	breath_in_slow	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\93\{93878335-A4EC-D99D-AF6B-6BC9AA314FCF}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_in_slow\breath_in_slow		308796
+	493866566	breath_out_fast	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\1F\{1F659DB1-A724-2B57-17D1-E82D6A9D5B45}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_out_fast\breath_out_fast		176496
+	530085473	breath_in_fast	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\3D\{3D3F3835-E117-AF9B-BD24-D84A9F2C5065}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_in_fast\breath_in_fast		88296
+	533129816	detector-01	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\A7\{A7967AA6-841C-8351-38AA-D9C267EB5035}.wem		\Interactive Music Hierarchy\Default Work Unit\Detector\detector-01\detector-01		352896
+	560590981	calyx	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\23\{23244EA6-808C-BE3E-5ECC-6F3003E2A749}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Stingers\calyx\calyx		793896
+	577367345	exorcism	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\5B\{5B4A5AD8-C096-F314-2652-11B24A5B590B}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\States\05_Victory\exorcism		1764096
+	591024859	breath_out_medium	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\88\{88EAED35-A2AF-B5C8-8C32-D0234862FD87}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_out_medium\breath_out_medium		264696
+	598508302	depths_mid	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\52\{52734442-9983-A910-0350-22F4C52BB96D}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\States\03_Depths_mid\depths_mid\depths_mid		9878496
+	607429272	breath_in_fast	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\A0\{A02C3C94-EB26-748A-3776-B378706758CF}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_in_fast\breath_in_fast		88296
+	704286143	detector	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\56\{56900596-4FA5-5905-558E-CED2DE366B47}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\States\04_Depths_low\depths_low\detector		352896
+	724879013	breath_in_slow	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\E4\{E4A248D9-7866-5FF9-70AA-5C71428E1C2D}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_in_slow\breath_in_slow		308796
+	785236605	depths_low	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\9B\{9B321570-F4D1-D8ED-F2C2-A61CB9C442B1}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\States\04_Depths_low\depths_low\depths_low		5292096
+	836353531	breath_in_slow	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\A4\{A4F027A7-BED5-3025-650B-6D748D286767}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_in_slow\breath_in_slow		308796
+	857685262	breath_out_slow	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\CE\{CE19E5D8-F755-8E37-3890-98942F22D0D4}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_out_slow\breath_out_slow		396996
+	916282234	iron_hit	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\1E\{1E97FD41-6C58-F998-BFD9-4AA52FE8B315}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Stingers\iron_hit\iron_hit		176496
+	947097495	breath_in_fast	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\30\{30416987-BE8F-1D1C-7C8C-8BE38A01BF8E}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_in_fast\breath_in_fast		88296
+	982430676	breath_out_fast	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\18\{18CA7E52-343D-BBBD-A2BB-CDA7C67BC578}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Breath\breath_out_fast\breath_out_fast		176496
+	1044924086	dynamo	D:\Documentos\GAME JAM\GGJ 2025\GGJ25\wwise\GGJ25\.cache\E2\{E20D21FE-2C2C-A45F-1C3D-982EE0A2E8E9}.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Stingers\dynamo\dynamo		324672
+
